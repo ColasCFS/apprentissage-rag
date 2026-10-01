@@ -1,12 +1,13 @@
+import sys
 from pathlib import Path
 from module3_exo1 import charger_documents, chunk_text
-import sys
+
 
 size=10
 overlap=3
 
 if len(sys.argv)<2:
-    print("Nombre d''élément de la list de sys.argv insuffisant, veuillez entrer un nom sous la forme ''python main.py dossier/")
+    print("Nombre d'élément de la liste insuffisant, veuillez entrer un nom sous la forme 'python main.py dossier/")
     raise SystemExit(1)
 
 documents=charger_documents(sys.argv[1])
