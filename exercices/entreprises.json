@@ -1,0 +1,62 @@
+[
+  {
+    "nom": "SOULE",
+    "siren": "914349097",
+    "nom_commune": "YGOS-SAINT-SATURNIN",
+    "departement": "40"
+  },
+  {
+    "nom": "SOULE",
+    "siren": "932948821",
+    "nom_commune": "PARIS",
+    "departement": "75"
+  },
+  {
+    "nom": "SOULE",
+    "siren": "907458038",
+    "nom_commune": "BORDEAUX",
+    "departement": "33"
+  },
+  {
+    "nom": "SOULE",
+    "siren": "510706807",
+    "nom_commune": "CASTANET-TOLOSAN",
+    "departement": "31"
+  },
+  {
+    "nom": "SOULE",
+    "siren": "452109036",
+    "nom_commune": "BRUGES",
+    "departement": "33"
+  },
+  {
+    "nom": "PASCAL SOULE (SOULE PASCAL)",
+    "siren": "951942929",
+    "nom_commune": "DOMEZAIN-BERRAUTE",
+    "departement": "64"
+  },
+  {
+    "nom": "GILLES SOULE-CHEMELLO (SOULE)",
+    "siren": "333226611",
+    "nom_commune": "BARBAZAN",
+    "departement": "31"
+  },
+  {
+    "nom": "MATHIEU SOULE",
+    "siren": "752962860",
+    "nom_commune": "GRESY-SUR-AIX",
+    "departement": "73"
+  },
+  {
+    "nom": "SARL SOULE",
+    "siren": "411376767",
+    "nom_commune": "PONT-DU-CHATEAU",
+    "departement": "63"
+  },
+  {
+    "nom": "PASCALE SOULE",
+    "siren": "482212388",
+    "nom_commune": "BLOIS",
+    "departement": "41"
+  }
+]

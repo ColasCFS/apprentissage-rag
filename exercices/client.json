@@ -1,0 +1,21 @@
+{
+  "nom": "Legrand",
+  "siren": "123456789",
+  "contrats": [
+    {
+      "numero": "11",
+      "type": "RC Pro",
+      "montant_annuel": 100
+    },
+    {
+      "numero": "12",
+      "type": "RC Entreprise",
+      "montant_annuel": 200
+    },
+    {
+      "numero": "13",
+      "type": "Flotte Auto",
+      "montant_annuel": 300
+    }
+  ]
+}
