@@ -10,7 +10,14 @@ if len(sys.argv)<2:
     print("Nombre d'élément de la liste insuffisant, veuillez entrer un nom sous la forme 'python main.py dossier/")
     raise SystemExit(1)
 
-documents=charger_documents(sys.argv[1])
+try:
+    documents=charger_documents(sys.argv[1])
+except NotADirectoryError as e:
+    print("Le chemin n'est pas un dossier, veuillez entrer un nom sous la forme 'python main.py dossier/")
+    raise SystemExit(1)
+except FileNotFoundError as e:
+    print("Le chemin n'existe pas, veuillez entrer un nom sous la forme 'python main.py dossier/")
+    raise SystemExit(1)
 
 tous_les_chunks = []
 longueur_tous_chunks = 0

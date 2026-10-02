@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 
 size = 10
 overlap = 3
@@ -7,8 +8,14 @@ overlap = 3
 def charger_documents(dossier):
     dossier = Path(dossier)
     documents = list()
+
     if not dossier.exists():
         raise FileNotFoundError(f"Le dossier {dossier} n'existe pas.")
+
+    if not (dossier).is_dir():
+
+        raise NotADirectoryError(f"Le chemin {dossier} n'est pas un dossier.")
+    
     for fichier in dossier.glob("*.txt"):
         with open(fichier, "r", encoding="utf-8") as f:
             texte = f.read()
