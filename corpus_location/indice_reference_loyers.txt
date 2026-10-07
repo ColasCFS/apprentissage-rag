@@ -1,0 +1,12 @@
+Indice de référence des loyers (IRL)
+Source : https://www.service-public.gouv.fr/particuliers/vosdroits/F13723 (Service Public / DILA, valeurs vérifiées le 12 juillet 2026, licence Etalab 2.0). Texte reformulé et condensé le 7 octobre 2026, non relu par un juriste. Les valeurs changent chaque trimestre.
+
+Définition. L'indice de référence des loyers (IRL) sert à calculer l'augmentation maximale du loyer lors de la révision annuelle d'un bail d'habitation qui contient une clause de révision. Il est calculé par l'Insee à partir de l'évolution des prix à la consommation sur les 12 derniers mois, hors tabac et hors loyers.
+
+Publication. L'Insee publie l'IRL chaque trimestre et il paraît au Journal officiel. Des valeurs distinctes existent pour la métropole continentale, la Corse et les départements d'outre-mer.
+
+Dernières valeurs en métropole. Au 2e trimestre 2026, l'IRL vaut 148,37, soit une hausse de 1,15 % sur un an. Au 1er trimestre 2026, il valait 146,60, en hausse de 0,78 % sur un an.
+
+Utilisation. Le nouveau loyer maximum est égal au loyer actuel multiplié par l'IRL du trimestre de référence de l'année en cours, puis divisé par l'IRL du même trimestre un an plus tôt. Le propriétaire peut appliquer une hausse plus faible, mais pas plus forte.
+
+Limite. Depuis août 2022 en métropole et juillet 2024 outre-mer, les logements classés F ou G au diagnostic de performance énergétique ne peuvent plus voir leur loyer révisé.

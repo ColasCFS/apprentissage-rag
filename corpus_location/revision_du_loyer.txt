@@ -1,0 +1,14 @@
+Révision du loyer en cours de bail
+Source : https://www.service-public.gouv.fr/particuliers/vosdroits/F1311 (Service Public / DILA, fiche vérifiée le 8 août 2025, licence Etalab 2.0). Texte reformulé et condensé le 7 octobre 2026, non relu par un juriste.
+
+Condition préalable. Le loyer ne peut être révisé en cours de bail que si le bail contient une clause de révision. Sans cette clause, le loyer reste fixe jusqu'au renouvellement.
+
+Fréquence et date. La révision a lieu au plus une fois par an, à la date prévue dans le bail ou, à défaut, à la date anniversaire du bail.
+
+Calcul. L'augmentation est plafonnée par l'évolution de l'indice de référence des loyers (IRL) publié par l'Insee. Le nouveau loyer est égal au loyer actuel multiplié par l'IRL du trimestre de référence de l'année en cours, divisé par l'IRL du même trimestre de l'année précédente. Le trimestre de référence est celui indiqué dans le bail, ou à défaut le dernier publié à la date de signature. Exemple donné par la fiche : un loyer de 600 euros, avec comme référence le 2e trimestre (IRL 146,68 en 2025 et 148,37 en 2026), peut passer à 600 × 148,37 / 146,68, soit 606,91 euros.
+
+Délai pour réclamer. Le propriétaire dispose d'un an à partir de la date prévue pour la révision pour la demander. Elle ne s'applique qu'à partir de sa demande, sans effet rétroactif. S'il laisse passer ce délai d'un an, la révision de l'année est perdue.
+
+Logements énergivores. En métropole, le loyer des logements classés F ou G au DPE ne peut plus être révisé pour les baux signés, renouvelés ou reconduits depuis le 24 août 2022. Outre-mer, la même règle s'applique depuis le 1er juillet 2024.
+
+Travaux. Pour un logement vide, le bail peut prévoir une majoration du loyer après des travaux d'amélioration réalisés par le propriétaire. Dans certains immeubles anciens, le propriétaire qui a fait des travaux d'économie d'énergie peut aussi demander une contribution du locataire, limitée dans le temps et soumise à conditions.
