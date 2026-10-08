@@ -28,11 +28,6 @@ if __name__=="__main__":
         raise SystemExit(1)
 
     question = sys.argv[1]
+
     chunks, vectors = load_index()
     resultats = retrieve(question, chunks, vectors)
-
-    for score, chunk in resultats:
-        print(f"{score:.3f}  [{chunk['source']}]  {chunk['texte'][:100]}")
-
-for car in chunks[0]["texte"][:5]:
-    print(car)

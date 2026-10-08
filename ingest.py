@@ -30,13 +30,14 @@ if __name__ == "__main__":
 
     chunks=[]
     for doc in documents:
+        titre = doc["texte"].split("\n")[0].strip()
         liste_de_chunks = chunk_text(doc["texte"], size=size, overlap=overlap)
         for chunk in liste_de_chunks:
-            chunks.append({"source": doc["source"], "texte": chunk})
+            chunks.append({"source": doc["source"], "texte": chunk,"titre":titre})
 
 
 
-    docs_vecs = embed([chunk["texte"] for chunk in chunks])
+    docs_vecs = embed([chunk["titre"] + ". " + chunk["texte"] for chunk in chunks])
     np.save("vectors.npy", docs_vecs)
 
     with open("chunks.json", "w", encoding="utf-8") as f:
