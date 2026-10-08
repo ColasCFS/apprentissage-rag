@@ -10,8 +10,6 @@ model = "mistral-embed"
 
 client = Mistral(api_key=api_key)
 
-
-
 def embed(textes):
     response = client.embeddings.create(model=model, inputs=textes)
     return [d.embedding for d in response.data]

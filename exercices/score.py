@@ -15,7 +15,7 @@ noteA = "Le locataire peut résilier le bail avec un préavis d'un mois."
 noteB = "La tour Eiffel mesure environ 330 mètres."
 noteC = "Le dépôt de garantie est restitué sous deux mois."
 notes =[noteA, noteB, noteC]
-paires=[]
+
 
 def cosinus(a, b):
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
@@ -24,7 +24,7 @@ def embed(textes):
     response = client.embeddings.create(model=model, inputs=textes)
     return [d.embedding for d in response.data]
 
-def search(question, docs, docs_vecs, k):
+def search(question, docs, docs_vecs, k=3):
     q_vec = embed([question])[0]
     paires = []
     for i in range(len(docs)):
