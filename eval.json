@@ -1,0 +1,107 @@
+[
+  {
+    "id": "Q01",
+    "type": "simple",
+    "question": "J'ai cassé la chasse des toilettes, qui est responsable des travaux de réparations?",
+    "reponse_attendue": "Le locataire est en charge des petits travaux de réparations courants",
+    "sources_attendues": ["entretien_reparations.txt"]
+  },
+  {
+    "id": "Q02",
+    "type": "sans les mots du titre",
+    "question": "J'ai loué mon appartement, puis-je y retourner quand je veux?",
+    "reponse_attendue": "Non, hors cas spécifiques : travaux, mise en vente ou mise en location",
+    "sources_attendues": ["droit_de_visite.txt"]
+  },
+  {
+    "id": "Q03",
+    "type": "simple",
+    "question": "Qui doit payer les charges de l'immeuble quand c'est au forfait?",
+    "reponse_attendue": "Le locataire, qui paie un forfait fixe et non régularisé",
+    "sources_attendues": ["charges_locatives.txt"]
+  },
+  {
+    "id": "Q04",
+    "type": "simple",
+    "question": "Je suis locataire, je veux faire une sous-location de mon appartement j'ai toujours le droit.",
+    "reponse_attendue": "Non, seulement avec l'accord écrit du propriétaire, sur le principe et sur le prix",
+    "sources_attendues": ["sous_location.txt"]
+  },
+  {
+    "id": "Q05",
+    "type": "simple",
+    "question": "Le loyer n'a aps été payé pour la première fois, qu'est ce que je dois faire?",
+    "reponse_attendue": "On fait d'abord une relance à l'amiable",
+    "sources_attendues": ["impayes_et_expulsion.txt"]
+  },
+  {
+    "id": "Q06",
+    "type": "hors corpus",
+    "question": "Quel est le montant de loyer à Caen?",
+    "reponse_attendue": null,
+    "sources_attendues": []
+  },
+  {
+    "id": "Q07",
+    "type": "hors corpus",
+    "question": "Les communs de l'immeuble que je loue sont constitués des caves également ou est-ce mon lot?",
+    "reponse_attendue": null,
+    "sources_attendues": []
+  },
+  {
+    "id": "Q08",
+    "type": "sans les mots du titre",
+    "question": "Pendant quelle période de l'année un locataire ne peut-il pas être expulsé ?",
+    "reponse_attendue": "Du 1er novembre au 31 mars ; la procédure est suspendue (pas annulée) et la dette reste due",
+    "sources_attendues": ["treve_hivernale.txt"]
+  },
+  {
+    "id": "Q09",
+    "type": "sans les mots du titre",
+    "question": "Mon propriétaire peut-il m'interdire d'avoir un chat dans mon appartement ?",
+    "reponse_attendue": "Non : le bail ne peut pas interdire les animaux familiers ; seule interdiction possible, les chiens dangereux de 1re catégorie",
+    "sources_attendues": ["animaux.txt"]
+  },
+  {
+    "id": "Q10",
+    "type": "simple",
+    "question": "Quelle est la durée maximale d'un bail mobilité ?",
+    "reponse_attendue": "10 mois (bail de 1 à 10 mois, ni renouvelable ni reconductible)",
+    "sources_attendues": ["bail_mobilite.txt"]
+  },
+  {
+    "id": "Q11",
+    "type": "simple",
+    "question": "Comment sont imposés les loyers d'un logement meublé ?",
+    "reponse_attendue": "En bénéfices industriels et commerciaux (BIC) ; ceux d'un logement vide sont des revenus fonciers",
+    "sources_attendues": ["vide_ou_meuble.txt"]
+  },
+  {
+    "id": "Q12",
+    "type": "simple",
+    "question": "Quelle est la température maximale autorisée dans un logement ?",
+    "reponse_attendue": "19 °C en moyenne sur l'ensemble des pièces",
+    "sources_attendues": ["temperature_chauffage.txt"]
+  },
+  {
+    "id": "Q13",
+    "type": "simple",
+    "question": "Le locataire peut-il ne pas payer son dernier mois de loyer et laisser le propriétaire garder le dépôt de garantie à la place ?",
+    "reponse_attendue": "Non : loyer dû jusqu'à la fin du préavis ; le dépôt couvre les éventuels dégâts ; risque de saisie conservatoire",
+    "sources_attendues": ["dernier_loyer_et_depot.txt"]
+  },
+  {
+    "id": "Q14",
+    "type": "deux fiches",
+    "question": "Un locataire qui ne paie plus son loyer peut-il être expulsé en janvier ?",
+    "reponse_attendue": "Non en principe : trêve hivernale du 1er novembre au 31 mars (sauf exceptions, ex. relogement assuré) ; la procédure reprend au 1er avril et la dette reste due",
+    "sources_attendues": ["impayes_et_expulsion.txt", "treve_hivernale.txt"]
+  },
+  {
+    "id": "Q15",
+    "type": "hors corpus",
+    "question": "Combien coûtent les frais de notaire pour l'achat d'un appartement ?",
+    "reponse_attendue": null,
+    "sources_attendues": []
+  }
+]
