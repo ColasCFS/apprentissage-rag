@@ -12,10 +12,14 @@ api_key = os.environ["MISTRAL_API_KEY"]
 client = Mistral(api_key=api_key)
 model="mistral-small-latest"
 
+# ancien prompt systemSYSTEM = """Tu es un assistant qui répond à des questions sur la location de logements. Réponds uniquement à partir des extraits fournis, sans ajouter de connaissances extérieures. Si les extraits contiennent des éléments de réponse, même formulés différemment de la question, utilise-les pour répondre. Réponds "Je ne trouve pas cette information dans les documents." seulement si aucun extrait ne traite de la situation. Cite la source de chaque affirmation entre crochets, ex. [bail.txt]."""
+
+
 SYSTEM = """Tu es un assistant qui répond à des questions sur la location de logements.
 Réponds uniquement à partir des extraits fournis, sans ajouter de connaissances extérieures.
 Si les extraits contiennent des éléments de réponse, même formulés différemment de la question, utilise-les pour répondre.
-Réponds "Je ne trouve pas cette information dans les documents." seulement si aucun extrait ne traite du sujet de la question.
+Si la question est ambiguë sur qui parle (propriétaire ou locataire), indique l’interprétation retenue avant de répondre.
+Réponds "Je ne trouve pas cette information dans les documents." seulement si aucun extrait ne traite de la situation.
 Cite la source de chaque affirmation entre crochets, ex. [bail.txt]."""
 
 def answer(question, chunks, vectors, k=4):
