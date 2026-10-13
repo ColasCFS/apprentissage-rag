@@ -5,3 +5,5 @@ chunks.json
 vectors.npy
 chunks_v1.json
 vectors_v1.npy
+chunks_*.json
+vectors_*.npy
