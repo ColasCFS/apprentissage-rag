@@ -1,0 +1,122 @@
+[
+  {
+    "id": "Q01",
+    "question": "J'ai cassé la chasse des toilettes, qui est responsable des travaux de réparations?",
+    "reponse_attendue": "Le locataire est en charge des petits travaux de réparations courants",
+    "reponse": "Les dégâts dus à un défaut d'entretien ou à une négligence, par exemple des trous dans les murs, une porte enfoncée, une moquette brûlée ou un parquet abîmé. Il répond aussi des dégâts causés par les personnes qu'il a fait entrer dans le logement [degradations_en_cours_de_location.txt].\n\nPendant toute la durée du bail, le locataire assure l'entretien courant du logement et les petites réparations, appelées réparations locatives [entretien_reparations.txt].\n\nLa réparation de la chasse des toilettes cassée par le locataire relève donc de sa responsabilité, car il s'agit d'une dégradation due à sa négligence ou à un défaut d'entretien [degradations_en_cours_de_location.txt, entretien_reparations.txt].",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend correctement l'élément clé de la réponse attendue en attribuant la responsabilité des réparations à la charge du locataire."
+  },
+  {
+    "id": "Q02",
+    "question": "J'ai loué mon appartement, puis-je y retourner quand je veux?",
+    "reponse_attendue": "Non, hors cas spécifiques : travaux, mise en vente ou mise en location",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_a_tort",
+    "justification": "La réponse attendue contient l'information, mais le modèle affirme ne pas la trouver."
+  },
+  {
+    "id": "Q03",
+    "question": "Qui doit payer les charges de l'immeuble quand c'est au forfait?",
+    "reponse_attendue": "Le locataire, qui paie un forfait fixe avec le loyer, sans régularisation ; ce forfait n'est possible qu'en meublé (si le bail le prévoit) ou en bail mobilité, pas en location vide",
+    "reponse": "Les charges de l'immeuble sont payées sous forme de forfait versé avec le loyer, sans régularisation, lorsque le bail le prévoit ainsi [colocation.txt][documents_obligatoires_bailleur.txt][bail_mobilite.txt].",
+    "verdict": "partielle",
+    "justification": "La réponse générée mentionne le forfait et l'absence de régularisation, mais ne précise pas que le locataire est le payeur ni les restrictions sur le type de location (meublé ou bail mobilité)."
+  },
+  {
+    "id": "Q04",
+    "question": "Je suis locataire, je veux faire une sous-location de mon appartement j'ai toujours le droit.",
+    "reponse_attendue": "Non, seulement avec l'accord écrit du propriétaire, sur le principe et sur le prix",
+    "reponse": "Vous avez le droit de sous-louer votre appartement sous certaines conditions :\n- **Logement privé (vide ou meublé)** : Vous devez obtenir l'accord écrit du propriétaire, à la fois pour le principe de la sous-location et pour le prix. Le loyer au m² demandé au sous-locataire ne peut pas dépasser celui que vous payez [sous_location.txt].\n- **Logement social** : La sous-location de tout le logement est interdite. Une sous-location partielle n'est autorisée que dans des cas spécifiques (accueil d'une personne de plus de 60 ans, en situation de handicap, ou d'un jeune de moins de 30 ans dans le cadre d'une cohabitation intergénérationnelle solidaire), et le bailleur doit en être informé au préalable [sous_location.txt].\n- **Logement soumis à la loi de 1948** : Une autorisation écrite est requise pour sous-louer l'ensemble du logement [sous_location.txt].",
+    "verdict": "partielle",
+    "justification": "La réponse générée inclut des détails supplémentaires non demandés (logement social, loi de 1948) et omet l'élément clé de l'accord écrit du propriétaire sur le principe et le prix."
+  },
+  {
+    "id": "Q05",
+    "question": "Le loyer n'a aps été payé pour la première fois, qu'est ce que je dois faire?",
+    "reponse_attendue": "Côté propriétaire : relancer d'abord le locataire à l'amiable, puis mise en demeure par lettre recommandée si besoin ; dès le premier impayé, il peut aussi solliciter le garant (caution, Visale ou assurance loyers impayés)",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_a_tort",
+    "justification": "La réponse attendue contient des instructions claires sur les actions à entreprendre en cas de premier impayé de loyer."
+  },
+  {
+    "id": "Q06",
+    "question": "Quel est le montant de loyer à Caen?",
+    "reponse_attendue": "L’information n’est pas dans le corpus.",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme attendu."
+  },
+  {
+    "id": "Q07",
+    "question": "Les communs de l'immeuble que je loue sont constitués des caves également ou est-ce mon lot?",
+    "reponse_attendue": "L’information n’est pas dans le corpus.",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, ce qui correspond à la réponse attendue."
+  },
+  {
+    "id": "Q08",
+    "question": "Pendant quelle période de l'année un locataire ne peut-il pas être expulsé ?",
+    "reponse_attendue": "Du 1er novembre au 31 mars ; la procédure est suspendue (pas annulée) et la dette reste due",
+    "reponse": "Un locataire ne peut pas être expulsé du **1er novembre au 31 mars**, sauf exceptions (notamment si un relogement adapté est assuré, pour des squatteurs, ou dans le cadre d'une éviction d'un conjoint violent) [treve_hivernale.txt, impayes_et_expulsion.txt].",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés."
+  },
+  {
+    "id": "Q09",
+    "question": "Mon propriétaire peut-il m'interdire d'avoir un chat dans mon appartement ?",
+    "reponse_attendue": "Non : le bail ne peut pas interdire les animaux familiers ; seule interdiction possible, les chiens dangereux de 1re catégorie",
+    "reponse": "Non, le propriétaire ne peut pas vous interdire d'avoir un chat dans votre appartement si c'est votre résidence principale. [animaux.txt]",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés."
+  },
+  {
+    "id": "Q10",
+    "question": "Quelle est la durée maximale d'un bail mobilité ?",
+    "reponse_attendue": "10 mois (bail de 1 à 10 mois, ni renouvelable ni reconductible)",
+    "reponse": "La durée maximale d'un bail mobilité est de 10 mois. [bail_mobilite.txt]",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et corrects."
+  },
+  {
+    "id": "Q11",
+    "question": "Comment sont imposés les loyers d'un logement meublé ?",
+    "reponse_attendue": "En bénéfices industriels et commerciaux (BIC) ; ceux d'un logement vide sont des revenus fonciers",
+    "reponse": "Les loyers d'un logement meublé sont imposés dans la catégorie des bénéfices industriels et commerciaux (BIC). [vide_ou_meuble.txt]",
+    "verdict": "juste",
+    "justification": "La réponse générée mentionne correctement la catégorie d'imposition des loyers d'un logement meublé (BIC) et correspond à la réponse attendue."
+  },
+  {
+    "id": "Q12",
+    "question": "Quelle est la température maximale autorisée dans un logement ?",
+    "reponse_attendue": "19 °C en moyenne sur l'ensemble des pièces",
+    "reponse": "La réglementation limite la moyenne des températures de l'ensemble des pièces d'un logement à 19 °C. [temperature_chauffage.txt]",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend exactement l'élément clé de la réponse attendue."
+  },
+  {
+    "id": "Q13",
+    "question": "Le locataire peut-il ne pas payer son dernier mois de loyer et laisser le propriétaire garder le dépôt de garantie à la place ?",
+    "reponse_attendue": "Non : loyer dû jusqu'à la fin du préavis ; le dépôt couvre les éventuels dégâts ; risque de saisie conservatoire",
+    "reponse": "Non, le locataire ne peut pas ne pas payer son dernier mois de loyer et laisser le propriétaire garder le dépôt de garantie à sa place. Le locataire doit payer son loyer et ses charges jusqu'à la fin du bail, préavis compris. Il ne peut pas décider de ne pas payer le dernier mois en considérant que le dépôt de garantie le couvre [dernier_loyer_et_depot.txt].",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés."
+  },
+  {
+    "id": "Q14",
+    "question": "Un locataire qui ne paie plus son loyer peut-il être expulsé en janvier ?",
+    "reponse_attendue": "Non en principe : trêve hivernale du 1er novembre au 31 mars (sauf exceptions, ex. relogement assuré) ; la procédure reprend au 1er avril et la dette reste due",
+    "reponse": "Non, sauf exceptions. La trêve hivernale interdit les expulsions du 1er novembre au 31 mars, mais des exceptions existent, notamment si un relogement adapté est assuré ou pour des squatteurs [treve_hivernale.txt].",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement mentionnés."
+  },
+  {
+    "id": "Q15",
+    "question": "Combien coûtent les frais de notaire pour l'achat d'un appartement ?",
+    "reponse_attendue": "L’information n’est pas dans le corpus.",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, ce qui correspond à la réponse attendue."
+  }
+]

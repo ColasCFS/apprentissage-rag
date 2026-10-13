@@ -1,7 +1,10 @@
-from exercices.api_utils import get_json
+questions = [{"id": "Q01"}, {"id": "Q02"}]
+trouvee = None
 
-url1 = "https://api.open-meteo.com/v1/forecast"
-params1 = {"latitude": 49.18, "longitude": -0.35, "current": "temperature_2m"}
+for q in questions:
+    if q["id"] == "Q02":
+        trouvee = q
+    if trouvee is None:
+        print("introuvable")
 
-data1 = get_json(url1, params1)
-print(data1)
+print(trouvee)

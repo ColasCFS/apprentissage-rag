@@ -50,9 +50,4 @@ if __name__ == "__main__":
     chunks = chunk_text(documents[0]["texte"], size, overlap)
     print(len(chunks))
 
-    print(chunk_text("abc", 5, 3))
-    print(chunk_text("abcdefghijkl", 5, 2))
-    print(chunk_text("abcdefgh", 5, 2))
-    print(chunk_text("ab", 5, 3))
-    print(chunk_text(charger_documents("docs")[0]["texte"], size, overlap))
 

@@ -7,7 +7,7 @@ with open("eval.json", "r", encoding="utf-8") as f:
 chunks, vectors = load_index()
 resultats =[]
 
-for k in [4,8]:
+for k in [8]:
     for question in questions:
         print(k, question["id"])
         reponse, sources = answer(question["question"], chunks, vectors, k=k)

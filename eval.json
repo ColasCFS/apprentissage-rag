@@ -17,7 +17,7 @@
     "id": "Q03",
     "type": "simple",
     "question": "Qui doit payer les charges de l'immeuble quand c'est au forfait?",
-    "reponse_attendue": "Le locataire, qui paie un forfait fixe et non régularisé",
+    "reponse_attendue": "Le locataire, qui paie un forfait fixe avec le loyer, sans régularisation ; ce forfait n'est possible qu'en meublé (si le bail le prévoit) ou en bail mobilité, pas en location vide",
     "sources_attendues": ["charges_locatives.txt"]
   },
   {
@@ -31,7 +31,7 @@
     "id": "Q05",
     "type": "simple",
     "question": "Le loyer n'a aps été payé pour la première fois, qu'est ce que je dois faire?",
-    "reponse_attendue": "On fait d'abord une relance à l'amiable",
+    "reponse_attendue": "Côté propriétaire : relancer d'abord le locataire à l'amiable, puis mise en demeure par lettre recommandée si besoin ; dès le premier impayé, il peut aussi solliciter le garant (caution, Visale ou assurance loyers impayés)",
     "sources_attendues": ["impayes_et_expulsion.txt"]
   },
   {

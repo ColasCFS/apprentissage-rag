@@ -28,7 +28,7 @@ for question in questions:
         position+=1
     if rang == None:
         nb__non_trouves+=1
-        rang_moyen_numérateur+=k+1
+        rang_moyen_numérateur+=K+1
 
     print(f"{question['id']}, rang: {rang} | attendu : {question['sources_attendues']} | récupéré : {sources}")
 print(f"Hit rate : {nb_evaluees-nb__non_trouves}/{nb_evaluees}")

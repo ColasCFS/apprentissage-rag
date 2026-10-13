@@ -1,0 +1,122 @@
+[
+  {
+    "id": "Q01",
+    "question": "J'ai cassé la chasse des toilettes, qui est responsable des travaux de réparations?",
+    "reponse_attendue": "Le locataire est en charge des petits travaux de réparations courants",
+    "reponse": "La réparation de la chasse des toilettes relève des réparations locatives, donc à la charge du locataire [entretien_reparations.txt].",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend correctement l'élément clé de la réponse attendue."
+  },
+  {
+    "id": "Q02",
+    "question": "J'ai loué mon appartement, puis-je y retourner quand je veux?",
+    "reponse_attendue": "Non, hors cas spécifiques : travaux, mise en vente ou mise en location",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_a_tort",
+    "justification": "La réponse attendue indique clairement que l'information est disponible et précise les exceptions."
+  },
+  {
+    "id": "Q03",
+    "question": "Qui doit payer les charges de l'immeuble quand c'est au forfait?",
+    "reponse_attendue": "Le locataire, qui paie un forfait fixe avec le loyer, sans régularisation ; ce forfait n'est possible qu'en meublé (si le bail le prévoit) ou en bail mobilité, pas en location vide",
+    "reponse": "Les charges de l'immeuble sont payées sous forme de forfait versé avec le loyer, sans régularisation, lorsque cela est prévu au bail [colocation.txt][bail_mobilite.txt].",
+    "verdict": "partielle",
+    "justification": "La réponse générée mentionne le paiement sans régularisation et la nécessité d'une clause dans le bail, mais omet explicitement que le locataire est le payeur et que le forfait n'est possible qu'en meublé ou bail mobilité."
+  },
+  {
+    "id": "Q04",
+    "question": "Je suis locataire, je veux faire une sous-location de mon appartement j'ai toujours le droit.",
+    "reponse_attendue": "Non, seulement avec l'accord écrit du propriétaire, sur le principe et sur le prix",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_a_tort",
+    "justification": "La réponse attendue indique que la sous-location est possible avec l'accord écrit du propriétaire, ce qui contredit le refus du modèle."
+  },
+  {
+    "id": "Q05",
+    "question": "Le loyer n'a aps été payé pour la première fois, qu'est ce que je dois faire?",
+    "reponse_attendue": "Côté propriétaire : relancer d'abord le locataire à l'amiable, puis mise en demeure par lettre recommandée si besoin ; dès le premier impayé, il peut aussi solliciter le garant (caution, Visale ou assurance loyers impayés)",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_a_tort",
+    "justification": "La réponse générée ne contient pas les éléments clés de la réponse attendue, alors qu'ils sont présents dans le corpus."
+  },
+  {
+    "id": "Q06",
+    "question": "Quel est le montant de loyer à Caen?",
+    "reponse_attendue": "L’information n’est pas dans le corpus.",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme attendu."
+  },
+  {
+    "id": "Q07",
+    "question": "Les communs de l'immeuble que je loue sont constitués des caves également ou est-ce mon lot?",
+    "reponse_attendue": "L’information n’est pas dans le corpus.",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, ce qui correspond à la réponse attendue."
+  },
+  {
+    "id": "Q08",
+    "question": "Pendant quelle période de l'année un locataire ne peut-il pas être expulsé ?",
+    "reponse_attendue": "Du 1er novembre au 31 mars ; la procédure est suspendue (pas annulée) et la dette reste due",
+    "reponse": "Un locataire ne peut pas être expulsé pendant la **trêve hivernale**, qui court chaque année du **1er novembre au 31 mars** de l'année suivante [treve_hivernale.txt].",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et corrects."
+  },
+  {
+    "id": "Q09",
+    "question": "Mon propriétaire peut-il m'interdire d'avoir un chat dans mon appartement ?",
+    "reponse_attendue": "Non : le bail ne peut pas interdire les animaux familiers ; seule interdiction possible, les chiens dangereux de 1re catégorie",
+    "reponse": "Non, le bail ne peut pas interdire au locataire d'avoir un ou plusieurs animaux familiers dans sa résidence principale louée, vide ou meublée. La seule exception concerne les chiens dangereux de 1re catégorie (chiens d'attaque) [animaux.txt].",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés."
+  },
+  {
+    "id": "Q10",
+    "question": "Quelle est la durée maximale d'un bail mobilité ?",
+    "reponse_attendue": "10 mois (bail de 1 à 10 mois, ni renouvelable ni reconductible)",
+    "reponse": "La durée maximale d'un bail mobilité est de 10 mois. [bail_mobilite.txt]",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et corrects."
+  },
+  {
+    "id": "Q11",
+    "question": "Comment sont imposés les loyers d'un logement meublé ?",
+    "reponse_attendue": "En bénéfices industriels et commerciaux (BIC) ; ceux d'un logement vide sont des revenus fonciers",
+    "reponse": "Les loyers d'un logement meublé sont imposés dans la catégorie des bénéfices industriels et commerciaux (BIC). [vide_ou_meuble.txt]",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend exactement l'élément clé de la réponse attendue."
+  },
+  {
+    "id": "Q12",
+    "question": "Quelle est la température maximale autorisée dans un logement ?",
+    "reponse_attendue": "19 °C en moyenne sur l'ensemble des pièces",
+    "reponse": "La réglementation limite la moyenne des températures de l'ensemble des pièces d'un logement à 19 °C. [temperature_chauffage.txt]",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés."
+  },
+  {
+    "id": "Q13",
+    "question": "Le locataire peut-il ne pas payer son dernier mois de loyer et laisser le propriétaire garder le dépôt de garantie à la place ?",
+    "reponse_attendue": "Non : loyer dû jusqu'à la fin du préavis ; le dépôt couvre les éventuels dégâts ; risque de saisie conservatoire",
+    "reponse": "Non, le locataire ne peut pas ne pas payer son dernier mois de loyer en considérant que le dépôt de garantie le couvre. Le locataire doit payer son loyer et ses charges jusqu'à la fin du bail, préavis compris [dernier_loyer_et_depot.txt]. Le dépôt de garantie sert à couvrir d'éventuels dégâts ou réparations locatives constatés à l'état des lieux de sortie, et non à payer le dernier mois de loyer [dernier_loyer_et_depot.txt].",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement exprimés."
+  },
+  {
+    "id": "Q14",
+    "question": "Un locataire qui ne paie plus son loyer peut-il être expulsé en janvier ?",
+    "reponse_attendue": "Non en principe : trêve hivernale du 1er novembre au 31 mars (sauf exceptions, ex. relogement assuré) ; la procédure reprend au 1er avril et la dette reste due",
+    "reponse": "Non, sauf exceptions. La trêve hivernale interdit les expulsions du 1er novembre au 31 mars, sauf si un relogement adapté est proposé ou pour des cas spécifiques comme les squatteurs ou l'éviction d'un conjoint violent [impayes_et_expulsion.txt, treve_hivernale.txt].",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement mentionnés."
+  },
+  {
+    "id": "Q15",
+    "question": "Combien coûtent les frais de notaire pour l'achat d'un appartement ?",
+    "reponse_attendue": "L’information n’est pas dans le corpus.",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme attendu."
+  }
+]
