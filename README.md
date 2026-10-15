@@ -1,3 +1,7 @@
+## Parcours d'apprentissage
+
+Ce RAG est l'aboutissement d'un parcours en modules. Etapes précédentes : appels d'API avec `requests` et gestion des erreurs, manipulation de JSON, lecture et découpage de fichiers, appels à un LLM (résumé de document en JSON, conversation multi-tours, calcul du coût en tokens), embeddings et recherche sémantique.
+
 ## Ce que fait le projet
 Ce projet permet aux locataires et aux bailleurs d'obtenir rapidement des réponses à des questions précises sur la location immobilière (préavis, restitution du dépôt de garantie, obligations du propriétaire, etc.), sans avoir à parcourir manuellement de nombreux documents.
 
@@ -151,6 +155,126 @@ Gestion des erreurs : le programme s’arrête si aucune question n’est fourni
 3. **Base vectorielle** : migration de l'index vers Chroma.
 4. **Au-delà** : ingestion de PDF, interface minimale pour un utilisateur non technique.
 
-## Parcours d'apprentissage
 
-Ce RAG est l'aboutissement d'un parcours en modules. Etapes précédentes : appels d'API avec `requests` et gestion des erreurs, manipulation de JSON, lecture et découpage de fichiers, appels à un LLM (résumé de document en JSON, conversation multi-tours, calcul du coût en tokens), embeddings et recherche sémantique.
+
+## Évaluation et essais (module 7)
+
+### Jeu de test
+
+`eval.json` contient 15 questions figées (Q01 à Q15), écrites avant les essais :
+
+- 12 questions dont la réponse est dans le corpus, dont une (Q14) qui demande deux fiches ;
+- 3 questions hors corpus (Q06, Q07, Q15), pour vérifier que le système sait refuser.
+
+Chaque question a une réponse attendue et la ou les fiches sources attendues.
+
+### Métriques
+
+| Métrique | Ce qu'elle mesure | Calcul |
+|---|---|---|
+| Hit rate (recall@k) | Le retrieval ramène-t-il le bon fichier ? | % des 12 questions dans le corpus dont une source attendue figure dans les k chunks récupérés |
+| Rang moyen | À quelle position arrive le premier bon chunk ? | Moyenne du rang de la 1re bonne source ; une question non trouvée compte k + 1 (pénalité fixée avant les essais) |
+| Réponses correctes | La réponse finale est-elle bonne ? | Notation des 15 réponses avec 5 étiquettes ; correctes = `juste` + `refus_correct` |
+
+Étiquettes de notation :
+
+| Étiquette | Règle |
+|---|---|
+| `juste` | Tous les éléments clés de la réponse attendue sont présents, explicitement |
+| `partielle` | Au moins un élément clé manque ou n'est qu'implicite |
+| `fausse` | Affirme le contraire de la réponse attendue, ou répond alors que l'information est absente du corpus |
+| `refus_a_tort` | Dit ne pas trouver alors que la réponse attendue contient l'information |
+| `refus_correct` | Dit ne pas trouver, et l'information n'est pas dans le corpus |
+
+Les cas particuliers non demandés ne sont pas exigés. Les informations supplémentaires correctes ne font pas baisser la note.
+
+Le hit rate est saturé (12/12 dès l'essai 1) et indulgent : il compte le bon fichier, pas le bon passage. Le rang moyen et les réponses notées sont donc les métriques qui départagent.
+
+### Essais (une variable changée à la fois)
+
+| Essai | Changement | Chunks | k | Hit rate | Rang moyen | Réponses correctes |
+|---|---|---|---|---|---|---|
+| 1a | Référence : chunks de 500 caractères, overlap 50, titre préfixé, prompt v1 | 148 | 4 | 12/12 | 1,58 | 12/15 |
+| 1b | k = 8 | 148 | 8 | 12/12 | 1,58 | 11/15 |
+| 2 | Ligne « Source » retirée du texte vectorisé | 129 | 4 | 11/12 | 1,50 | non mesuré |
+| 3 | Découpage par paragraphe | 195 | 4 | 11/12 | 1,75 | non mesuré |
+| 4 | Paragraphes + k = 8 | 195 | 8 | non mesuré | non mesuré | 11/15 (*) |
+| 5 | Paragraphes + k = 8 + prompt v2 (assoupli) | 195 | 8 | non mesuré | non mesuré | 13/15 (*) |
+
+(*) Notations des essais 4 et 5 non relues par un humain (voir Limites).
+
+Ce que les essais montrent :
+
+- **k = 8 n'améliore rien à lui seul** (1a → 1b) : le top 4 est inclus dans le top 8, donc le hit rate et le rang ne peuvent pas bouger, et la qualité des réponses ne s'améliore pas pour un coût en tokens doublé.
+- **Le retrait de la ligne « Source » améliore le rang** (1,58 → 1,50) : cette ligne, commune aux 30 fiches, occupait une partie de chaque premier chunk et brouillait les embeddings. Le passage qui répond à Q02 passe du 40e au 16e rang.
+- **Le découpage par paragraphe** remonte le passage de Q02 au 8e rang, mais fait perdre Q05 : la composition du hit rate change sans que le total bouge.
+- **À l'essai 4, le goulot passe à la génération** : pour Q02 et Q05, le passage qui répond est dans le contexte envoyé au modèle (vérifié avec `debug.py`), et le modèle refuse quand même.
+- **L'assouplissement du prompt** (essai 5) supprime les refus à tort sans faire perdre les refus corrects (3/3). Effet secondaire : le modèle ajoute une ligne « Interprétation retenue » à toutes ses réponses.
+
+Configuration retenue : celle de l'essai 5, avec les réserves ci-dessous.
+
+### LLM-juge
+
+`juge.py` note automatiquement les réponses avec `mistral-small-latest` (température 0). Pour chaque question, le juge reçoit la question, la réponse attendue et la réponse générée, jamais le verdict humain. Il renvoie `{"verdict", "justification"}`. Le script contrôle que le verdict appartient aux 5 étiquettes et enregistre `invalide` sinon. `accord.py` compare ensuite les verdicts du juge à une référence humaine notée à l'aveugle.
+
+| Test | Prompt du juge | Accord avec l'humain | Désaccords |
+|---|---|---|---|
+| Essai 1a (k = 4) | v1 | 14/15 (93 %) | Q04 : le juge affirme qu'un élément manque alors qu'il est présent, et pénalise des détails supplémentaires |
+| Essai 1b (k = 8) | v2 (règle « informations supplémentaires ») | 15/15 (100 %) | aucun |
+
+Le prompt v2 a été corrigé en regardant Q04. Il a donc été vérifié sur les réponses à k = 8, qui n'avaient pas servi à le corriger.
+
+Lecture : le juge est fiable sur les cas faciles (refus, réponses courtes) et a échoué sur le seul cas difficile du premier test, avec une justification inventée. Le score d'accord ne suffit pas : il faut relire les désaccords et un échantillon de justifications.
+
+### Limites
+
+- **Peu de questions, une seule exécution** : 15 questions et une exécution par configuration. Un écart d'une question peut être du bruit.
+- **Ajustement sur le jeu de test** : k et le prompt de l'essai 5 ont été choisis après avoir vu les échecs sur ces 15 questions. Le 13/15 surestime probablement la performance sur des questions nouvelles. Il faudrait un jeu de test mis de côté, jamais regardé pendant les réglages.
+- **Essais 4 et 5 notés par Claude** : leurs notations n'ont pas été relues par un humain. À renoter avec le juge validé, puis à vérifier sur un échantillon.
+- **Un seul annotateur, non juriste** : la référence humaine repose sur une personne. Le corpus (30 fiches reformulées à partir de service-public.fr, licence Etalab) n'a pas été relu par un juriste.
+- **Juge et générateur de la même famille** : les deux sont des modèles Mistral. Un juge peut favoriser les réponses d'un modèle proche (risque connu, non mesuré ici).
+- **Essais 2 et 3 mesurés sur le retrieval seulement** : aucune réponse générée n'a été notée pour ces configurations.
+- **Nom de fichier trompeur** : `notation_essai4.csv` contient en réalité la notation de l'essai 1 à k = 4. À renommer en `notation_essai1_k4.csv`.
+
+## Workflow, reformulation ou agent ? (15 octobre)
+
+### Question posée
+Un agent, qui décide lui-même quoi chercher et combien de fois, fait-il mieux qu'un workflow à chemin fixe ? Et à quel coût ?
+
+### Configurations comparées
+| Config | Chemin |
+| --- | --- |
+| A — workflow | Recherche avec la question brute, puis génération |
+| B — workflow + reformulation | Le modèle reformule la question, recherche avec la requête obtenue, puis génération sur la question d'origine |
+| C — agent | Le modèle appelle l'outil `retrieve` autant qu'il le juge utile, avec un maximum de 3 tours imposé par le code |
+
+### Conditions communes
+- **Index :** celui de l'essai 5 (découpage par paragraphe, sans ligne « Source », 195 chunks).
+- **Réglages :** k = 8, température 0, `mistral-small-latest`.
+- **Prompt :** règles de réponse communes aux trois configurations (`prompts.py`, prompt v3). L'agent ne reçoit en plus que ce qui lui est propre : utiliser l'outil, chercher une fois par sujet, relancer une recherche si besoin.
+- **Notation :** le juge du 13 octobre, inchangé. Son code a été réorganisé, puis vérifié par un test de non-régression (15 verdicts identiques).
+- **Règle fixée avant de voir les scores :** une sortie « limite atteinte » sur une question hors corpus compte comme un refus correct, et elle est signalée à part.
+
+### Résultats (une exécution)
+| Config | Correctes | Fausses | Refus à tort | Sorties par limite | Appels | Tokens entrée | Tokens sortie |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| A — workflow | 15/15 | 0 | 0 | 0 | 15 | 12 083 | 700 |
+| B — reformulation | 13/15 | 1 (Q02) | 1 (Q04) | 0 | 30 | 15 207 | 1 072 |
+| C — agent | 15/15 | 0 | 0 | 1 | 32 | 27 552 | 1 675 |
+
+### Lecture
+- **L'agent n'améliore pas la qualité sur ce jeu.** Il consomme pourtant 2,3 fois plus de tokens d'entrée, car il relit tout l'historique à chaque tour. Il n'a cherché plusieurs fois que sur des questions hors corpus, où ça ne sert à rien.
+- **La reformulation dégrade le résultat.** Sur Q02, elle transforme « y retourner » en « résilier le bail ». La génération adapte ensuite son interprétation aux mauvais extraits, avec une source valide : l'erreur ne se voit pas. Une consigne interdisant de changer l'intention n'a pas corrigé la dérive.
+- **La règle « une recherche par sujet » a été ignorée par l'agent sur Q14.** C'est la troisième fois : une consigne oriente, seule la structure contraint.
+- **Décision :** garder le workflow A.
+
+### Limites
+- **Jeu de développement :** les règles du prompt v3 viennent d'échecs observés sur ces mêmes questions, donc ce score est probablement optimiste. Il faudrait le confirmer sur des questions neuves, jamais utilisées pour régler le système.
+- **Plafond :** A et C sont tous les deux à 15/15, et le jeu ne contient aucune question qui exige plusieurs recherches enchaînées. Il ne mesure donc pas ce pour quoi un agent est fait. La conclusion vaut pour ce type de questions seulement.
+- **Une seule exécution :** le nombre de sorties par limite est passé de 2 (essai à blanc) à 1 avec le même code. Un écart d'une question peut être du bruit.
+- **Juge non vérifié sur ce style de réponse :** il a été étalonné sur les réponses de l'essai 1, plus courtes que celles de l'agent.
+- **Tokens d'embedding non comptés :** cela sous-estime le coût de l'agent quand il cherche plusieurs fois.
+- **Comparaison avec l'essai 5 :** le score de A n'est pas comparable au 13/15 de l'essai 5, car le prompt et la température ont changé.
+
+### Fichiers
+`prompts.py`, `reformulation.py`, `compare.py`, `juge.py` (rendu importable), `juge_compare.py`, `synthese.py`, `reponses_comparaison.json`, `verdicts_comparaison.json`

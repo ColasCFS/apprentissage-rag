@@ -1,0 +1,587 @@
+[
+  {
+    "id": "Q01",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend explicitement l'élément clé de la réponse attendue concernant la responsabilité du locataire pour les petits travaux de réparations courants.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 824,
+      "sortie": 33,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q01",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "La réponse générée mentionne explicitement que la chasse d'eau relève des réparations à la charge du locataire, ce qui correspond à l'élément clé de la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 987,
+      "sortie": 63,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q01",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend correctement l'élément clé de la réponse attendue (responsabilité du locataire pour les petits travaux).",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1600,
+      "sortie": 124,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q02",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "La réponse générée inclut tous les éléments clés de la réponse attendue (interdiction de retour libre, exceptions pour travaux/mise en vente/location).",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 700,
+      "sortie": 38,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q02",
+    "config": "B_reformulation",
+    "verdict": "fausse",
+    "justification": "La réponse générée affirme à tort que le propriétaire ne peut jamais reprendre le logement en cours de bail, alors que la réponse attendue mentionne des cas spécifiques (travaux, mise en vente ou mise en location) où cela est possible.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 926,
+      "sortie": 90,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q02",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue (interdiction générale, exceptions pour travaux/mise en vente/location) sont présents et correctement développés dans la réponse générée.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1521,
+      "sortie": 137,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q03",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et corrects.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 788,
+      "sortie": 58,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q03",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement identifiés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 980,
+      "sortie": 91,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q03",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents : le locataire paie, le forfait est fixe sans régularisation, et cette modalité est réservée aux locations meublées ou bail mobilité.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1572,
+      "sortie": 78,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q04",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 748,
+      "sortie": 151,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q04",
+    "config": "B_reformulation",
+    "verdict": "refus_a_tort",
+    "justification": "La réponse attendue indique que la sous-location est possible avec l'accord écrit du propriétaire, ce qui contredit le refus du modèle.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 961,
+      "sortie": 20,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q04",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue (accord écrit du propriétaire sur le principe et le prix) sont présents et explicitement mentionnés dans la réponse générée.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1525,
+      "sortie": 229,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q05",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents dans la réponse générée.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 883,
+      "sortie": 73,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q05",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement détaillés dans la réponse générée.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1295,
+      "sortie": 244,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q05",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue (relance amiable, mise en demeure, recours au garant) sont présents et correctement détaillés dans la réponse générée.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1730,
+      "sortie": 288,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q06",
+    "config": "A_workflow",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme attendu.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 910,
+      "sortie": 11,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q06",
+    "config": "B_reformulation",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme attendu.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1095,
+      "sortie": 19,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q06",
+    "config": "C_agent",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, ce qui correspond à la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1671,
+      "sortie": 114,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q07",
+    "config": "A_workflow",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, ce qui correspond à la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 849,
+      "sortie": 11,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q07",
+    "config": "B_reformulation",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme attendu.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 979,
+      "sortie": 37,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q07",
+    "config": "C_agent",
+    "verdict": "refus_correct",
+    "justification": "Règle fixée avant les scores : sortie par limite sur une question hors corpus.",
+    "sortie_limite": true,
+    "nb_recherches": 3,
+    "tokens": {
+      "entree": 3286,
+      "sortie": 67,
+      "appels": 3
+    }
+  },
+  {
+    "id": "Q08",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et corrects.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 845,
+      "sortie": 45,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q08",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement identifiés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1102,
+      "sortie": 99,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q08",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement identifiés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1640,
+      "sortie": 104,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q09",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 683,
+      "sortie": 55,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q09",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement identifiés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 859,
+      "sortie": 101,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q09",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement complétés par des précisions pertinentes.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1484,
+      "sortie": 117,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q10",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "La réponse générée contient tous les éléments clés de la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 767,
+      "sortie": 23,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q10",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "La réponse générée contient tous les éléments clés de la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 945,
+      "sortie": 30,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q10",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et corrects.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1522,
+      "sortie": 75,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q11",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "La réponse générée mentionne correctement la catégorie d'imposition des loyers d'un logement meublé (BIC) et correspond à la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 763,
+      "sortie": 36,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q11",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "La réponse générée mentionne correctement la catégorie d'imposition des loyers d'un logement meublé (BIC) et correspond à la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 865,
+      "sortie": 46,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q11",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "La réponse générée mentionne correctement la catégorie d'imposition (BIC) et la distinction avec les revenus fonciers pour les logements vides.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1519,
+      "sortie": 61,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q12",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend exactement l'élément clé de la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 662,
+      "sortie": 32,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q12",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend exactement l'information clé de la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 936,
+      "sortie": 41,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q12",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1530,
+      "sortie": 54,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q13",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents dans la réponse générée.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 913,
+      "sortie": 61,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q13",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1141,
+      "sortie": 95,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q13",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1602,
+      "sortie": 81,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q14",
+    "config": "A_workflow",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et corrects.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 867,
+      "sortie": 62,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q14",
+    "config": "B_reformulation",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et corrects.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1039,
+      "sortie": 76,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q14",
+    "config": "C_agent",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1726,
+      "sortie": 95,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q15",
+    "config": "A_workflow",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme la réponse attendue.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 881,
+      "sortie": 11,
+      "appels": 1
+    }
+  },
+  {
+    "id": "Q15",
+    "config": "B_reformulation",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme attendu.",
+    "sortie_limite": false,
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1097,
+      "sortie": 20,
+      "appels": 2
+    }
+  },
+  {
+    "id": "Q15",
+    "config": "C_agent",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas dans le corpus, comme attendu.",
+    "sortie_limite": false,
+    "nb_recherches": 2,
+    "tokens": {
+      "entree": 3624,
+      "sortie": 51,
+      "appels": 3
+    }
+  }
+]

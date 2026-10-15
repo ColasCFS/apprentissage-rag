@@ -40,38 +40,32 @@ api_key = os.environ["MISTRAL_API_KEY"]
 client = Mistral(api_key=api_key)
 MODELE = "mistral-small-latest"
 
-# 2. Consigne système : rôle de l'agent + règle d'usage de l'outil
-SYSTEM = (
-    "Tu es un assistant sur le droit de la location en France. "
-    "Pour répondre, utilise l'outil retrieve et réponds uniquement à partir des extraits obtenus."
-)
+
+# 2. Consigne système, version 3 (15 oct.) : règles de réponse communes (prompts.py)
+#    + ce qui est propre à l'agent : utiliser l'outil, une recherche par sujet, relancer si besoin.
+
+from prompts import INTRO, REGLES_REPONSE
 
 SYSTEM = (
-    "Tu es un assistant sur le droit de la location en France. "
+    INTRO + " "
     "Pour répondre, utilise l'outil retrieve. "
-    "Règles de réponse : "
-    "N'utilise que les informations présentes dans les extraits ; n'ajoute aucun article de loi, "
-    "chiffre ou condition qui n'y figure pas. "
-    "Tu peux interpréter la question (si elle est ambiguë, indique en une phrase l'interprétation retenue) "
-    "et raisonner à partir des extraits pour en déduire la réponse, même si la formulation diffère. "
-    "Ne transpose pas une règle d'une situation à une autre (ex. une règle sur les travaux "
-    "ne s'applique pas aux visites). "
     "Avant de répondre, vérifie si la question touche plusieurs sujets (ex. une procédure ET un délai, "
-    "une règle ET ses conséquences) : si oui, fais une recherche par sujet avant de conclure."
-    "Cite la source de chaque affirmation entre crochets, ex. [droit_de_visite.txt]. "
-    "Si les extraits ne suffisent pas, relance une recherche ou dis ce qui manque."
+    "une règle ET ses conséquences) : si oui, fais une recherche par sujet avant de conclure. "
+    "Si les extraits ne suffisent pas, relance une recherche avec une autre formulation avant de conclure. "
+    + REGLES_REPONSE
 )
 
 MAX_TOURS = 3   # garde-fou : nombre maximum d'appels au modèle
 
 
 def repondre_agent(question, chunks, vectors, k=4):
-    """Pose la question à l'agent. Renvoie (réponse finale, liste des requêtes faites)."""
+    """Pose la question à l'agent. Renvoie (réponse finale, requêtes faites, consommation)."""
     messages = [
         {"role": "system", "content": SYSTEM},
         {"role": "user", "content": question},
     ]
-    requetes = []   # trace : ce que l'agent a cherché, dans l'ordre
+    requetes = []                                    # trace : ce que l'agent a cherché
+    tokens = {"entree": 0, "sortie": 0, "appels": 0} # consommation cumulée sur tous les tours
 
     for tour in range(MAX_TOURS):
         # 1. Le modèle lit toute la conversation et décide : répondre ou chercher
@@ -83,12 +77,18 @@ def repondre_agent(question, chunks, vectors, k=4):
             parallel_tool_calls=False,
             temperature=0,
         )
+        # On additionne à chaque tour : un agent relit tout l'historique à chaque appel,
+        # donc ses tokens d'entrée grossissent d'un tour à l'autre. C'est ce coût qu'on veut voir.
+        tokens["entree"] += reponse.usage.prompt_tokens
+        tokens["sortie"] += reponse.usage.completion_tokens
+        tokens["appels"] += 1
+
         message = reponse.choices[0].message
         messages.append(message)
 
         # 2. Pas de demande d'outil → c'est sa réponse finale : on sort
         if not message.tool_calls:
-            return message.content, requetes
+            return message.content, requetes, tokens
 
         # 3. Sinon, le harness exécute la recherche demandée
         appel = message.tool_calls[0]
@@ -108,12 +108,13 @@ def repondre_agent(question, chunks, vectors, k=4):
         })
 
     # 4. On sort de la boucle sans réponse : la limite de tours est atteinte
-    return "Limite de recherches atteinte sans réponse finale.", requetes
+    return "Limite de recherches atteinte sans réponse finale.", requetes, tokens
 
 
 if __name__ == "__main__":
     chunks, vectors = load_index()   # chargé une seule fois
     question = "Un locataire qui ne paie plus son loyer peut-il être expulsé en janvier ?"
-    reponse, requetes = repondre_agent(question, chunks, vectors)
+    reponse, requetes, tokens = repondre_agent(question, chunks, vectors)
     print("Requêtes faites par l'agent :", requetes)
+    print("Tokens :", tokens)
     print("Réponse :", reponse)

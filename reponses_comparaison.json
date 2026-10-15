@@ -1,0 +1,680 @@
+[
+  {
+    "id": "Q01",
+    "config": "A_workflow",
+    "reponse": "D'après les extraits, remplacer les mécanismes de chasse d'eau relève des réparations à la charge du locataire [entretien_reparations.txt].",
+    "requetes": [
+      "J'ai cassé la chasse des toilettes, qui est responsable des travaux de réparations?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 824,
+      "sortie": 33,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q01",
+    "config": "B_reformulation",
+    "reponse": "D'après les extraits, la chasse d'eau relève des réparations à la charge du locataire, car elle fait partie des mécanismes de chasse d'eau mentionnés dans les exemples de plomberie [entretien_reparations.txt].",
+    "requetes": [
+      "responsable travaux réparation chasse d'eau après dégradation"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 987,
+      "sortie": 63,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q01",
+    "config": "C_agent",
+    "reponse": "D'après les documents, si la chasse d'eau est cassée à cause d'un défaut d'entretien ou d'une négligence de ta part, c'est à toi, en tant que locataire, d'assurer sa réparation. En revanche, si la casse est due à l'usure normale ou à un cas de force majeure, c'est au propriétaire de prendre en charge les travaux [entretien_reparations.txt, degradations_en_cours_de_location.txt].",
+    "requetes": [
+      "responsabilité réparation locataire propriétaire casse chasse d'eau toilettes"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1600,
+      "sortie": 124,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q02",
+    "config": "A_workflow",
+    "reponse": "Non, une fois le logement loué, le locataire en a la jouissance exclusive et le propriétaire ne peut pas y entrer librement [droit_de_visite.txt].",
+    "requetes": [
+      "J'ai loué mon appartement, puis-je y retourner quand je veux?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 700,
+      "sortie": 38,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q02",
+    "config": "B_reformulation",
+    "reponse": "Interprétation retenue : la question porte sur la possibilité pour le propriétaire de reprendre le logement à tout moment.\n\nRéponse : Non, le propriétaire ne peut pas mettre fin au bail quand il le souhaite. Il ne peut donner congé que pour la date d'échéance du bail, jamais en cours de bail [conge_proprietaire.txt].",
+    "requetes": [
+      "Peut-on résilier le bail pour reprendre le logement à tout moment ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 926,
+      "sortie": 90,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q02",
+    "config": "C_agent",
+    "reponse": "Non, une fois le logement loué, le locataire en a la jouissance exclusive : le propriétaire ne peut pas y retourner librement. Il ne peut y accéder que dans deux cas précis : pour des travaux (sous conditions) ou pour des visites si le bail prévoit une clause permettant de vendre ou relouer le logement, et uniquement aux conditions fixées par la loi (accord sur les jours et horaires, limitation à 2 heures par jour ouvrable, exclusion des jours fériés) [droit_de_visite.txt].",
+    "requetes": [
+      "droit de retour du propriétaire dans un logement loué"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1521,
+      "sortie": 137,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q03",
+    "config": "A_workflow",
+    "reponse": "Quand les charges sont payées sous forme de forfait, c'est le locataire qui doit les payer, car le forfait est versé avec le loyer sans régularisation [bail_mobilite.txt, charges_locatives.txt, vide_ou_meuble.txt].",
+    "requetes": [
+      "Qui doit payer les charges de l'immeuble quand c'est au forfait?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 788,
+      "sortie": 58,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q03",
+    "config": "B_reformulation",
+    "reponse": "Le locataire doit payer les charges de l'immeuble quand elles sont payées sous forme de forfait, car le forfait est versé avec le loyer et il n'y a pas de régularisation annuelle dans ce cas [charges_locatives.txt, bail_mobilite.txt, vide_ou_meuble.txt].",
+    "requetes": [
+      "Charges de l'immeuble payées au forfait par le locataire ou le bailleur"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 980,
+      "sortie": 91,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q03",
+    "config": "C_agent",
+    "reponse": "Quand les charges sont **au forfait**, c’est le locataire qui paie un montant fixe chaque mois avec son loyer, et **il n’y a pas de régularisation** annuelle [charges_locatives.txt, documents_obligatoires_bailleur.txt].",
+    "requetes": [
+      "charges immeuble forfait locataire propriétaire"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1572,
+      "sortie": 78,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q04",
+    "config": "A_workflow",
+    "reponse": "Interprétation retenue : La question porte sur la possibilité pour un locataire de sous-louer son logement sans restriction particulière.\n\nRéponse : Non, vous n'avez pas toujours le droit de sous-louer votre appartement. La sous-location est encadrée et nécessite l'accord écrit du propriétaire, qui doit porter à la fois sur le principe de la sous-location et sur le prix. Le loyer au mètre carré demandé au sous-locataire ne peut pas dépasser celui que vous payez. Vous devez également remettre au sous-locataire l'autorisation écrite du propriétaire et une copie de votre bail en cours. La sous-location ne peut pas durer plus longtemps que votre bail principal [sous_location.txt].",
+    "requetes": [
+      "Je suis locataire, je veux faire une sous-location de mon appartement j'ai toujours le droit."
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 748,
+      "sortie": 151,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q04",
+    "config": "B_reformulation",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "requetes": [
+      "locataire souhaite sous-location appartement droits"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 961,
+      "sortie": 20,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q04",
+    "config": "C_agent",
+    "reponse": "Non, vous n’avez pas toujours le droit de sous-louer votre appartement. La sous-location est encadrée par la loi :\n- **Elle est interdite sans l’accord écrit du propriétaire**, qui doit accepter à la fois le principe de la sous-location et le prix demandé. Le loyer au m² ne peut pas dépasser celui que vous payez [sous_location.txt].\n- **La sous-location ne peut pas excéder la durée de votre bail principal** [sous_location.txt].\n- **Sanctions** : Sous-louer sans autorisation peut entraîner la résiliation de votre bail et des condamnations à rembourser les sous-loyers perçus, voire des dommages-intérêts [sous_location.txt].\n\nSi votre logement est un **logement social**, la sous-location totale est interdite, et la sous-location partielle est très encadrée (accueil familial, cohabitation intergénérationnelle solidaire, etc.) [sous_location.txt].",
+    "requetes": [
+      "sous-location droit locataire"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1525,
+      "sortie": 229,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q05",
+    "config": "A_workflow",
+    "reponse": "Interprétation retenue : Il s'agit de la première fois que le loyer n'est pas payé, et vous êtes propriétaire.\n\nEn cas de premier impayé de loyer, le propriétaire peut se tourner vers le garant (caution, garantie Visale ou assurance loyers impayés) [impayes_et_expulsion.txt].",
+    "requetes": [
+      "Le loyer n'a aps été payé pour la première fois, qu'est ce que je dois faire?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 883,
+      "sortie": 73,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q05",
+    "config": "B_reformulation",
+    "reponse": "Interprétation retenue : Il s'agit de la première fois que le loyer n'est pas payé, donc d'un premier impayé.\n\nD'après les extraits, voici ce que vous devez faire en tant que propriétaire :\n\n1. **Relancer le locataire** : Commencez par le relancer pour le loyer impayé [impayes_et_expulsion.txt].\n2. **Envoyer une mise en demeure** : Si le locataire ne paie pas, adressez-lui une mise en demeure par lettre recommandée avec avis de réception [impayes_et_expulsion.txt].\n3. **Se tourner vers le garant** : Dès le premier impayé, vous pouvez vous tourner vers la caution, la garantie Visale ou une assurance loyers impayés [impayes_et_expulsion.txt].\n\nSi la dette ne dépasse pas 5 000 euros, une tentative de conciliation (conciliateur de justice ou médiateur) est obligatoire avant d'aller en justice [impayes_et_expulsion.txt].",
+    "requetes": [
+      "locataire n'a pas réglé le loyer pour la première fois, actions à prévoir"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1295,
+      "sortie": 244,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q05",
+    "config": "C_agent",
+    "reponse": "Pour un premier loyer non payé, voici les étapes à suivre :\n\n1. **Relance amiable** : Le propriétaire doit d'abord relancer le locataire, puis lui envoyer une **mise en demeure par lettre recommandée avec avis de réception** [impayes_et_expulsion.txt].\n\n2. **Recours au garant** : Dès le premier impayé, le propriétaire peut se tourner vers le garant (caution, garantie Visale ou assurance loyers impayés) [impayes_et_expulsion.txt].\n\n3. **Tentative de conciliation** : Si la dette ne dépasse pas 5 000 €, une tentative de conciliation (via un conciliateur de justice ou un médiateur) est obligatoire avant d'engager une procédure judiciaire [impayes_et_expulsion.txt].\n\n4. **Commandement de payer** : Si le bail a été signé après le 29 juillet 2023, le propriétaire doit faire délivrer un **commandement de payer** par un commissaire de justice, laissant **6 semaines** au locataire pour régler la dette [impayes_et_expulsion.txt].\n\nSi la situation persiste, une procédure judiciaire peut être engagée pour résilier le bail et demander l'expulsion.",
+    "requetes": [
+      "loyer non payé première fois procédure"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1730,
+      "sortie": 288,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q06",
+    "config": "A_workflow",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "requetes": [
+      "Quel est le montant de loyer à Caen?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 910,
+      "sortie": 11,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q06",
+    "config": "B_reformulation",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "requetes": [
+      "prix du loyer à Caen"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1095,
+      "sortie": 19,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q06",
+    "config": "C_agent",
+    "reponse": "Je ne trouve pas cette information dans les documents. Les fiches disponibles ne mentionnent pas de montant de loyer spécifique à Caen, ni de loyer de référence pour cette ville. Elles abordent uniquement l'encadrement des loyers dans certaines villes (Paris, Lille, Lyon, etc.) et la révision du loyer via l'IRL, mais sans données locales pour Caen [encadrement_loyers.txt, revision_du_loyer.txt].",
+    "requetes": [
+      "montant loyer moyen Caen"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1671,
+      "sortie": 114,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q07",
+    "config": "A_workflow",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "requetes": [
+      "Les communs de l'immeuble que je loue sont constitués des caves également ou est-ce mon lot?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 849,
+      "sortie": 11,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q07",
+    "config": "B_reformulation",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "requetes": [
+      "Les communs de l'immeuble locatif incluent-ils les caves ou relèvent-elles du lot loué ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 979,
+      "sortie": 37,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q07",
+    "config": "C_agent",
+    "reponse": "Limite de recherches atteinte sans réponse finale.",
+    "requetes": [
+      "propriété des caves dans un immeuble en location",
+      "propriété des caves dans un immeuble en location parties communes",
+      "propriété des caves parties communes ou privatives"
+    ],
+    "nb_recherches": 3,
+    "tokens": {
+      "entree": 3286,
+      "sortie": 67,
+      "appels": 3
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q08",
+    "config": "A_workflow",
+    "reponse": "Pendant la période du **1er novembre au 31 mars**, un locataire ne peut pas être expulsé, sauf exceptions [treve_hivernale.txt, impayes_et_expulsion.txt].",
+    "requetes": [
+      "Pendant quelle période de l'année un locataire ne peut-il pas être expulsé ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 845,
+      "sortie": 45,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q08",
+    "config": "B_reformulation",
+    "reponse": "Interprétation retenue : La question porte sur la période de l'année où l'expulsion d'un locataire est interdite, selon les extraits fournis.\n\nPendant la période du **1er novembre au 31 mars**, un locataire ne peut pas être expulsé, sauf exceptions [treve_hivernale.txt, impayes_et_expulsion.txt].",
+    "requetes": [
+      "période de l'année pendant laquelle un locataire ne peut pas faire l'objet d'une expulsion"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1102,
+      "sortie": 99,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q08",
+    "config": "C_agent",
+    "reponse": "Un locataire ne peut pas être expulsé **du 1er novembre au 31 mars** (période appelée \"trêve hivernale\"), sauf exceptions comme un relogement adapté, des squatteurs, une ordonnance de protection pour conjoint violent ou une expulsion dans le cadre d'un divorce [treve_hivernale.txt][impayes_et_expulsion.txt].",
+    "requetes": [
+      "période interdiction expulsion locataire"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1640,
+      "sortie": 104,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q09",
+    "config": "A_workflow",
+    "reponse": "Oui, ton propriétaire ne peut pas t'interdire d'avoir un chat dans ton appartement, car le bail ne peut pas interdire au locataire d'avoir un ou plusieurs animaux familiers, sauf pour les chiens dangereux de 1re catégorie [animaux.txt].",
+    "requetes": [
+      "Mon propriétaire peut-il m'interdire d'avoir un chat dans mon appartement ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 683,
+      "sortie": 55,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q09",
+    "config": "B_reformulation",
+    "reponse": "Interprétation retenue : La question porte sur l'interdiction d'avoir un chat dans un logement loué comme résidence principale.\n\nD'après les extraits, le bail ne peut pas interdire au locataire d'avoir un ou plusieurs animaux familiers dans une résidence principale louée vide ou meublée [animaux.txt]. Le chat étant un animal familier, le propriétaire ne peut donc pas vous l'interdire.",
+    "requetes": [
+      "propriétaire peut-il interdire animal domestique dans logement loué"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 859,
+      "sortie": 101,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q09",
+    "config": "C_agent",
+    "reponse": "Pour un logement loué vide ou meublé **comme résidence principale**, votre propriétaire ne peut pas vous interdire d'avoir un chat dans votre appartement, sauf si l'animal est un chien dangereux de 1re catégorie (chiens d'attaque) [animaux.txt].\n\nSi le logement est une location saisonnière (meublé de tourisme) et n'est pas votre résidence principale, le propriétaire peut interdire la présence d'animaux dans le contrat [animaux.txt].",
+    "requetes": [
+      "interdiction animal domestique logement location"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1484,
+      "sortie": 117,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q10",
+    "config": "A_workflow",
+    "reponse": "La durée maximale d'un bail mobilité est de 10 mois [bail_mobilite.txt].",
+    "requetes": [
+      "Quelle est la durée maximale d'un bail mobilité ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 767,
+      "sortie": 23,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q10",
+    "config": "B_reformulation",
+    "reponse": "La durée maximale d'un bail mobilité est de 10 mois [bail_mobilite.txt].",
+    "requetes": [
+      "durée maximale bail mobilité"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 945,
+      "sortie": 30,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q10",
+    "config": "C_agent",
+    "reponse": "La durée maximale d'un bail mobilité est de **10 mois**. Il n'est ni renouvelable ni reconductible, mais sa durée peut être modifiée une seule fois par avenant, sans dépasser 10 mois au total [bail_mobilite.txt].",
+    "requetes": [
+      "durée maximale bail mobilité"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1522,
+      "sortie": 75,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q11",
+    "config": "A_workflow",
+    "reponse": "Les loyers d'un logement meublé sont imposés dans la catégorie des bénéfices industriels et commerciaux (BIC). [vide_ou_meuble.txt]",
+    "requetes": [
+      "Comment sont imposés les loyers d'un logement meublé ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 763,
+      "sortie": 36,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q11",
+    "config": "B_reformulation",
+    "reponse": "Les loyers d'un logement meublé sont imposés dans la catégorie des bénéfices industriels et commerciaux (BIC). [vide_ou_meuble.txt]",
+    "requetes": [
+      "imposition revenus loyers logement meublé"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 865,
+      "sortie": 46,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q11",
+    "config": "C_agent",
+    "reponse": "Les loyers d'un logement meublé sont imposés dans la catégorie des **bénéfices industriels et commerciaux (BIC)** pour le propriétaire [vide_ou_meuble.txt].",
+    "requetes": [
+      "imposition loyers logement meublé"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1519,
+      "sortie": 61,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q12",
+    "config": "A_workflow",
+    "reponse": "La réglementation limite la moyenne des températures de l'ensemble des pièces d'un logement à 19 °C. [temperature_chauffage.txt]",
+    "requetes": [
+      "Quelle est la température maximale autorisée dans un logement ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 662,
+      "sortie": 32,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q12",
+    "config": "B_reformulation",
+    "reponse": "La réglementation limite la moyenne des températures de l'ensemble des pièces d'un logement à 19 °C. [temperature_chauffage.txt]",
+    "requetes": [
+      "Température maximale autorisée dans un logement"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 936,
+      "sortie": 41,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q12",
+    "config": "C_agent",
+    "reponse": "La réglementation limite la **moyenne des températures de l'ensemble des pièces d'un logement à 19 °C** [temperature_chauffage.txt].",
+    "requetes": [
+      "température maximale autorisée dans un logement"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1530,
+      "sortie": 54,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q13",
+    "config": "A_workflow",
+    "reponse": "Non, le locataire ne peut pas ne pas payer son dernier mois de loyer et laisser le propriétaire garder le dépôt de garantie à sa place.\n\n[dernier_loyer_et_depot.txt]\n[preavis_locataire.txt]\n[depot_de_garantie.txt]",
+    "requetes": [
+      "Le locataire peut-il ne pas payer son dernier mois de loyer et laisser le propriétaire garder le dépôt de garantie à la place ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 913,
+      "sortie": 61,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q13",
+    "config": "B_reformulation",
+    "reponse": "Non, le locataire ne peut pas ne pas payer son dernier mois de loyer et laisser le propriétaire garder le dépôt de garantie à la place. [dernier_loyer_et_depot.txt] [preavis_locataire.txt] [depot_de_garantie.txt]",
+    "requetes": [
+      "locataire peut-il ne pas régler le loyer du dernier mois de la durée du bail et laisser le bailleur conserver le dépôt de garantie en compensation"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1141,
+      "sortie": 95,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q13",
+    "config": "C_agent",
+    "reponse": "Non. Le locataire doit payer son loyer et ses charges jusqu'à la fin du bail, préavis compris. Il ne peut pas décider de ne pas payer le dernier mois en considérant que le dépôt de garantie le couvre [dernier_loyer_et_depot.txt].",
+    "requetes": [
+      "dépôt de garantie et dernier loyer"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1602,
+      "sortie": 81,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q14",
+    "config": "A_workflow",
+    "reponse": "Non, le locataire ne peut pas être expulsé en janvier, car la trêve hivernale interdit les expulsions du 1er novembre au 31 mars, sauf exceptions (notamment si un relogement adapté est proposé) [impayes_et_expulsion.txt].",
+    "requetes": [
+      "Un locataire qui ne paie plus son loyer peut-il être expulsé en janvier ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 867,
+      "sortie": 62,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q14",
+    "config": "B_reformulation",
+    "reponse": "Non, le locataire ne peut pas être expulsé en janvier en raison de la trêve hivernale, qui interdit les expulsions du 1er novembre au 31 mars, même si une décision de justice a été rendue [treve_hivernale.txt].",
+    "requetes": [
+      "locataire ne payant plus loyer peut-il être expulsé en janvier"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1039,
+      "sortie": 76,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q14",
+    "config": "C_agent",
+    "reponse": "Non, un locataire qui ne paie plus son loyer ne peut pas être expulsé en janvier en raison de la **trêve hivernale**, qui interdit les expulsions du **1er novembre au 31 mars**, sauf exceptions (notamment si un relogement adapté est proposé) [impayes_et_expulsion.txt].",
+    "requetes": [
+      "expulsion locataire impayés délai janvier"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1726,
+      "sortie": 95,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q15",
+    "config": "A_workflow",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "requetes": [
+      "Combien coûtent les frais de notaire pour l'achat d'un appartement ?"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 881,
+      "sortie": 11,
+      "appels": 1
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q15",
+    "config": "B_reformulation",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "requetes": [
+      "coût frais notaire achat appartement"
+    ],
+    "nb_recherches": 1,
+    "tokens": {
+      "entree": 1097,
+      "sortie": 20,
+      "appels": 2
+    },
+    "erreur": null
+  },
+  {
+    "id": "Q15",
+    "config": "C_agent",
+    "reponse": "Je ne trouve pas cette information dans les documents.",
+    "requetes": [
+      "frais de notaire achat appartement",
+      "coût frais de notaire achat immobilier"
+    ],
+    "nb_recherches": 2,
+    "tokens": {
+      "entree": 3624,
+      "sortie": 51,
+      "appels": 3
+    },
+    "erreur": null
+  }
+]
