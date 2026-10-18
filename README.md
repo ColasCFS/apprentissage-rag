@@ -278,3 +278,98 @@ Un agent, qui décide lui-même quoi chercher et combien de fois, fait-il mieux 
 
 ### Fichiers
 `prompts.py`, `reformulation.py`, `compare.py`, `juge.py` (rendu importable), `juge_compare.py`, `synthese.py`, `reponses_comparaison.json`, `verdicts_comparaison.json`
+
+## Projet final : RAG sur des conditions générales d'assurance (16-18 octobre)
+
+### Question posée
+
+Un RAG peut-il répondre à des questions d'assurés sur la garantie vol, à partir des conditions générales (CG) d'assurance habitation de trois assureurs, dont des pages scannées au téléphone et un document volontairement périmé ?
+
+### Corpus
+
+| Document | Pages | Édition | Particularité |
+|---|---|---|---|
+| CG MAIF réf. M5202AHA | 114 | mai 2026 | 4 pages remplacées par leur scan (p. 21, 51-53) |
+| CG MMA n° 410 S | 80 | juillet 2024 | 4 pages remplacées par leur scan (p. 16-19) |
+| CG AXA | 70 | avril 2009 | Gardé volontairement : antérieur à la loi Hamon (2014), pour tester l'obsolescence ; 1 page scannée (p. 7 imprimée = p. 9 du PDF) |
+
+Les CG ne sont pas republiables : les PDF, les scans, le cache OCR et `chunks_assurance.json` sont exclus du dépôt (`.gitignore`).
+
+### Chaîne de traitement
+
+| Étape | Fichier | Choix |
+|---|---|---|
+| Extraction | `ocr_corpus.py` | Mistral OCR sur les PDF natifs et les scans, avec cache et reprise après erreur 429 |
+| Contrôle des pages | `verifier_pages.py` | Vérifie que chaque scan correspond à la bonne page ; registre `corpus_assurance/documents.json` (page imprimée et position dans le PDF) |
+| Découpage | `ingest_assurance.py` | Par paragraphe, petits paragraphes regroupés jusqu'à ~500 caractères, gros tableaux découpés par groupes de lignes avec en-tête répété ; préfixe assureur dans le texte vectorisé ; métadonnées assureur / référence / édition / page / origine (natif ou scan) → 2 195 chunks |
+| Embeddings | `embed_assurance.py` | `mistral-embed`, lots de 64 |
+| Génération | `generate_assurance.py` | k = 8, `mistral-small-latest`, température 0, prompt v4 (`prompts.py`) |
+| Évaluation | `evaluate_assurance.py`, `juge_assurance.py` | Recherche mesurée sans appel d'API ; réponses notées par le LLM-juge, étalonné sur un échantillon noté à la main |
+
+**Prompt v4** (le v3 du projet location reste intact) : ne jamais transposer la règle d'un assureur à un autre ; répondre assureur par assureur et dire quand l'un d'eux est absent des extraits ; citer `[MAIF p.21]` ; signaler un document de plus de cinq ans ; renvoyer aux conditions particulières quand la réponse dépend du contrat souscrit.
+
+### Jeu de questions
+
+20 questions formulées comme un client (`eval_assurance.json`) : 6 simples, 4 comparatives entre assureurs, 3 sur des pages scannées, 2 sur un terme exact (référence de contrat), 3 sur le document AXA périmé, 2 hors corpus. Toutes portent sur la garantie vol.
+
+### Résultats (une exécution, 18 octobre)
+
+**Recherche** (18 questions, hors corpus exclues) :
+
+| Indicateur | Résultat |
+|---|---|
+| Hit rate à k = 8 | 15/18 |
+| Rang moyen (pénalité 9) | 3,17 |
+| Couverture des pages attendues | 70 % |
+
+**Réponses**, deux mesures :
+
+| Mesure | Correctes (juste + refus correct) | Détail |
+|---|---|---|
+| Notation humaine, 10 questions | 4/10 | 3 justes, 3 partielles, 3 fausses, 1 refus correct |
+| LLM-juge, 20 questions | 8/20 | 6 justes, 4 partielles, 7 fausses, 1 refus à tort, 2 refus corrects |
+
+**Accord du juge avec la notation humaine : 7/10** (15/15 sur le corpus location). Les trois désaccords n'ont pas la même cause :
+- P01 : la notation humaine compte une omission grave (ne pas dire de porter plainte) comme fausse ; la grille du juge la classe partielle. Deux règles différentes, pas une erreur du juge.
+- P02 : erreur du juge, qui n'a pas vu que la réponse contredisait l'attendu (« MMA ne remboursera pas » au lieu de « en principe oui »).
+- P18 : réponse attendue mal construite (elle exigeait la loi Hamon, absente du corpus ; on ne pouvait exiger que le signalement d'un document périmé).
+
+Choix retenu : ne pas modifier la grille du juge, pour ne pas la régler sur les 10 réponses qui servent à la tester. Les deux chiffres sont publiés avec cette limite.
+
+**Par type de question (verdicts du juge) :**
+
+| Type | Correctes | Lecture |
+|---|---|---|
+| Pages scannées | 3/3 | L'OCR tient sur ces pages, réponses au rang 1 |
+| Hors corpus | 2/2 | Refus corrects, avec renvoi aux conditions particulières |
+| Simples | 3/6 | Erreurs de génération (P01 oublie la plainte) et de recherche (P02 : la page définissant l'escalade n'est pas récupérée) |
+| Comparatives | 0/4 | Point faible principal : les 8 extraits viennent presque tous d'un seul assureur ; MMA absent des extraits pour P07 et P09 |
+| Terme exact | 0/2 | Réponses incomplètes ou hors sujet malgré une page trouvée (rangs 4 et 1) — verdicts du juge non revus à la main |
+| Document périmé | 0/3 | Le modèle signale bien l'édition 2009, mais répond ensuite comme si la règle était actuelle (P18) ; un montant faux (P16) |
+
+**Coût** : ~1 440 tokens d'entrée et ~280 de sortie par question (28 836 / 5 666 sur les 20).
+
+### Lecture
+
+1. **Le goulot principal est structurel, pas un réglage.** Une recherche unique sur une question comparative est dominée par un seul assureur. Remède à tester : une recherche par assureur cité, filtrée sur la métadonnée `assureur` (même leçon que Q14 du projet location : une consigne oriente, la structure contraint).
+2. **Les erreurs de génération sont des erreurs de fidélité** : un délai de 20 jours recopié « 5 jours » (P17), une conclusion contraire aux extraits (P02). Afficher et relire les sources reste nécessaire.
+3. **Signaler un document périmé ne suffit pas** : le modèle avertit puis affirme. Pour un usage réel, le remède est dans le corpus (retirer ou marquer les documents périmés), pas dans le prompt.
+
+### Limites
+
+- **Vérité terrain non validée par un expert** : les réponses attendues ont été rédigées à partir des PDF par un assistant IA ; 11 questions sur 20 portent un point marqué « à vérifier ». C'est la limite principale : un accord juge / humain mesure la cohérence, pas la justesse — sur P02, les deux s'étaient d'abord trompés de la même façon.
+- **Pages AXA corrigées après coup** : les pages attendues de P16, P17 et P18 avaient été saisies en numéro imprimé au lieu de la position dans le PDF (décalage de 2). Corrigées le 18 octobre ; c'est une erreur de saisie de la référence, pas un ajustement des réponses attendues.
+- **Une seule exécution**, 20 questions, un seul modèle : résultats indicatifs, pas statistiques.
+- **Juge étalonné sur 10 réponses seulement** (7/10) ; les 10 autres verdicts ne sont pas revus à la main.
+- **Alias `mistral-small-latest`** : la version du modèle peut changer entre deux lancements.
+- **Pas de règle de gravité** dans la grille : une omission qui ferait mal agir un assuré compte comme une erreur mineure.
+
+### Prochaines étapes
+
+1. Recherche par assureur pour les questions comparatives, mesurée sur les 4 questions concernées puis sur un jeu de questions neuves.
+2. Faire valider les réponses attendues par un professionnel de l'assurance.
+3. Ajouter une règle de gravité à la grille du juge, puis l'étalonner sur un nouvel échantillon.
+
+### Fichiers
+
+`ocr_corpus.py`, `verifier_pages.py`, `ingest_assurance.py`, `embed_assurance.py`, `diag_chunk.py`, `test_retrieval_assurance.py`, `generate_assurance.py`, `evaluate_assurance.py`, `juge_assurance.py`, `corpus_assurance/documents.json`, `eval_assurance.json`, `reponses_assurance.json`, `notation_assurance.csv`, `verdicts_juge_assurance.json`.

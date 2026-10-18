@@ -1,0 +1,1382 @@
+[
+  {
+    "id": "P01",
+    "type": "simple",
+    "question": "On m'a cambriolé. Qu'est-ce que je dois faire pour être remboursé par la MAIF ?",
+    "reponse": "Voici les étapes à suivre pour être remboursé par la MAIF après un cambriolage, selon les extraits fournis :\n\n1. **Déclaration du vol** :\n   - Vous devez déclarer le vol à la MAIF dès que possible, notamment si vous récupérez les objets volés [MAIF p.21, p.34, p.53].\n\n2. **Conditions de prise en charge** :\n   - Les biens mobiliers volés à l'intérieur du logement, d'une dépendance, d'une yourte, d'un mobil-home, d'une tiny house ou d'un local à usage utilitaire déclaré sont couverts s'ils ont été volés ou détériorés à l'occasion d'un vol avec **effraction**, **ruse** ou **agression**, ou d'une tentative de vol [MAIF p.51].\n   - Les détériorations des biens immobiliers assurés commises à l'occasion d'une intrusion, d'un vol ou d'une tentative de vol sont également couvertes [MAIF p.51].\n\n3. **Absence de franchise en cas d'agression** :\n   - La franchise ne s'applique pas si le vol est consécutif à un acte de violence ou à une agression [MAIF p.42].\n\n4. **Biens prêtés** :\n   - Les biens mobiliers que vous avez prêtés à un tiers sont garantis s'ils sont endommagés par celui-ci [MAIF p.48].\n\n5. **Garantie panne** :\n   - Vous bénéficiez également d'une garantie panne [MAIF p.48].\n\n**À noter** :\n- Si les biens volés étaient transportés dans ou sur un véhicule terrestre, une remorque ou un bateau, reportez-vous aux **dispositions particulières** du contrat [MAIF p.42].\n- Les conditions de remboursement peuvent dépendre de la formule choisie et des plafonds définis dans vos **conditions particulières**. Si ces informations ne sont pas dans les extraits, consultez votre contrat.\n\nSi vous avez récupéré les objets volés, informez-en immédiatement la MAIF [MAIF p.21, p.34, p.53].",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.879
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8693
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.869
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 53,
+        "origine": "scan",
+        "score": 0.8674
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 34,
+        "origine": "natif",
+        "score": 0.8674
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 21,
+        "origine": "scan",
+        "score": 0.8674
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8638
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 48,
+        "origine": "natif",
+        "score": 0.8632
+      }
+    ],
+    "tokens": {
+      "entree": 1305,
+      "sortie": 475
+    },
+    "erreur": null
+  },
+  {
+    "id": "P02",
+    "type": "simple",
+    "question": "On m'a volé des affaires alors que j'avais laissé la fenêtre ouverte. MMA rembourse ?",
+    "reponse": "D'après les extraits fournis pour MMA :\n\n- Le non-respect des conditions de garantie (comme la fermeture des fenêtres) peut entraîner une réduction de 50% de l'indemnité si le vol est dû à ce non-respect [MMA p.19].\n- Vous perdez tout droit à indemnité si le non-respect de la protection de base a permis ou facilité le vol [MMA p.18].\n- Vous perdez également tout droit à indemnité si vous avez répondu faussement disposer des moyens de protection exigés (comme des fenêtres fermées), si leur inexistence est constatée lors du sinistre [MMA p.19].\n\n**Réponse :**\nMMA ne remboursera pas si le vol est dû au fait d'avoir laissé la fenêtre ouverte, car cela constitue un non-respect des conditions de garantie pouvant entraîner une perte totale ou une réduction de 50% de l'indemnité. [MMA p.18-19]",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MMA",
+        "page_pdf": 50,
+        "origine": "natif",
+        "score": 0.8754
+      },
+      {
+        "rang": 2,
+        "assureur": "MMA",
+        "page_pdf": 18,
+        "origine": "scan",
+        "score": 0.8745
+      },
+      {
+        "rang": 3,
+        "assureur": "MMA",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.8738
+      },
+      {
+        "rang": 4,
+        "assureur": "MMA",
+        "page_pdf": 13,
+        "origine": "natif",
+        "score": 0.873
+      },
+      {
+        "rang": 5,
+        "assureur": "MMA",
+        "page_pdf": 38,
+        "origine": "natif",
+        "score": 0.8718
+      },
+      {
+        "rang": 6,
+        "assureur": "MMA",
+        "page_pdf": 19,
+        "origine": "scan",
+        "score": 0.8712
+      },
+      {
+        "rang": 7,
+        "assureur": "MMA",
+        "page_pdf": 17,
+        "origine": "scan",
+        "score": 0.8709
+      },
+      {
+        "rang": 8,
+        "assureur": "MMA",
+        "page_pdf": 19,
+        "origine": "scan",
+        "score": 0.8698
+      }
+    ],
+    "tokens": {
+      "entree": 1397,
+      "sortie": 217
+    },
+    "erreur": null
+  },
+  {
+    "id": "P03",
+    "type": "simple",
+    "question": "Je n'avais pas fermé à clé en sortant et on m'a volé ma télé. La MAIF me couvre ?",
+    "reponse": "D'après les extraits fournis pour la MAIF, le vol est couvert uniquement s'il est commis avec **effraction**, **ruse** ou **agression** [MAIF p.42, p.40]. Le fait de ne pas avoir fermé à clé ne constitue ni une effraction, ni une ruse, ni une agression.\n\n**Réponse pour la MAIF :**\nJe ne trouve pas cette information dans les documents. La couverture du vol dépend des conditions particulières de votre contrat (formule choisie, options souscrites, etc.). Veuillez consulter vos conditions particulières ou contacter la MAIF pour une réponse précise.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8798
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8753
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 43,
+        "origine": "natif",
+        "score": 0.8714
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8663
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8657
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8657
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 20,
+        "origine": "natif",
+        "score": 0.8657
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.8655
+      }
+    ],
+    "tokens": {
+      "entree": 1353,
+      "sortie": 139
+    },
+    "erreur": null
+  },
+  {
+    "id": "P04",
+    "type": "simple",
+    "question": "Mon logement est resté vide deux mois cet été et j'ai été cambriolé. Ça change quelque chose chez MMA ?",
+    "reponse": "Chez MMA, la durée d'inhabitation influence les obligations de l'assuré en matière de prévention contre le vol et le gel, mais cela ne modifie pas directement la couverture en cas de sinistre. Voici ce que disent les extraits :\n\n1. **Obligations en cas d'absence prolongée** :\n   - Pour une absence de **plus de 24 heures consécutives**, vous devez fermer tous les volets ou persiennes (s'ils constituent le seul moyen de protection) [MMA p.18].\n   - Si l'**inhabitation annuelle est supérieure à 90 jours**, vous devez fermer le robinet d'arrêt principal pour prévenir les risques de gel [MMA p.15]. Cependant, cette obligation ne concerne pas directement le vol.\n\n2. **Exclusions de garantie en cas de vol** :\n   - Les vols commis par des personnes habitant avec vous (conjoint, ascendants, descendants, colocataires) ne sont pas couverts [MMA p.17].\n   - Les objets à risque de vol situés dans des dépendances ou locaux attenants **sans communication directe avec l'habitation** ne sont pas couverts [MMA p.17].\n\n3. **Garantie vol** :\n   - Le vol est couvert s'il est commis **par agression** (violence ou menaces), **par une personne se présentant sous une fausse identité**, ou **par introduction clandestine** (vol à votre insu alors que vous étiez présent) [MMA p.16]. Cependant, si le vol est commis par un proche ou un colocataire, il n'est pas couvert [MMA p.17].\n\n### Conclusion pour MMA :\n- **La durée d'inhabitation (2 mois) n'est pas mentionnée comme un critère d'exclusion ou de limitation de garantie** dans les extraits fournis. Cependant, si votre contrat inclut des **conditions particulières** spécifiques (par exemple, une clause limitant la garantie en cas d'absence prolongée), celles-ci pourraient s'appliquer. **Consultez vos conditions particulières** pour vérifier.\n- **Si le vol a été commis par un proche ou un colocataire**, il ne sera pas couvert [MMA p.17].\n- **Si le vol correspond à l'une des situations couvertes** (agression, fausse identité, introduction clandestine), il devrait être garanti, sous réserve des autres conditions du contrat.\n\nSi vous avez souscrit une formule spécifique ou des options particulières, vérifiez si elles modifient ces règles. Sinon, MMA ne mentionne pas de restriction liée à une absence de 2 mois dans les extraits fournis.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MMA",
+        "page_pdf": 17,
+        "origine": "scan",
+        "score": 0.8566
+      },
+      {
+        "rang": 2,
+        "assureur": "MMA",
+        "page_pdf": 34,
+        "origine": "natif",
+        "score": 0.855
+      },
+      {
+        "rang": 3,
+        "assureur": "MMA",
+        "page_pdf": 18,
+        "origine": "scan",
+        "score": 0.8533
+      },
+      {
+        "rang": 4,
+        "assureur": "MMA",
+        "page_pdf": 13,
+        "origine": "natif",
+        "score": 0.8528
+      },
+      {
+        "rang": 5,
+        "assureur": "MMA",
+        "page_pdf": 16,
+        "origine": "scan",
+        "score": 0.8516
+      },
+      {
+        "rang": 6,
+        "assureur": "MMA",
+        "page_pdf": 18,
+        "origine": "scan",
+        "score": 0.8509
+      },
+      {
+        "rang": 7,
+        "assureur": "MMA",
+        "page_pdf": 15,
+        "origine": "natif",
+        "score": 0.8482
+      },
+      {
+        "rang": 8,
+        "assureur": "MMA",
+        "page_pdf": 11,
+        "origine": "natif",
+        "score": 0.847
+      }
+    ],
+    "tokens": {
+      "entree": 1616,
+      "sortie": 568
+    },
+    "erreur": null
+  },
+  {
+    "id": "P05",
+    "type": "simple",
+    "question": "Des voleurs ont essayé d'entrer sans y arriver, mais ils ont abîmé ma porte. La MAIF paie la réparation ?",
+    "reponse": "[MAIF p.20, p.33, p.51]\nOui, la MAIF prend en charge les détériorations des biens immobiliers assurés commises à l'occasion d'une tentative de vol, lorsqu'elles affectent un bien dont vous êtes propriétaire [MAIF p.20, p.33, p.51].",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8869
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8833
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8823
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.8819
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8818
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 53,
+        "origine": "scan",
+        "score": 0.8801
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 20,
+        "origine": "natif",
+        "score": 0.8753
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 22,
+        "origine": "natif",
+        "score": 0.8751
+      }
+    ],
+    "tokens": {
+      "entree": 1595,
+      "sortie": 77
+    },
+    "erreur": null
+  },
+  {
+    "id": "P06",
+    "type": "simple",
+    "question": "Quelqu'un que j'avais invité chez moi m'a volé des bijoux. MMA me rembourse ?",
+    "reponse": "D'après les extraits fournis pour MMA, voici la réponse :\n\n**Non, MMA ne vous remboursera pas dans ce cas.**\n\nEn effet, les extraits indiquent clairement que :\n- *\"Les vols commis par votre conjoint, vos ascendants, descendants, ou par d'autres personnes habitant avec vous.\"* ne sont pas couverts [MMA p.17].\n- *\"Le vol commis par une personne ayant la qualité d'assuré.\"* n'est pas couvert [MMA p.41].\n\nBien que votre invité ne soit pas explicitement mentionné dans ces exclusions, la formulation *\"ou par d'autres personnes habitant avec vous\"* et *\"une personne ayant la qualité d'assuré\"* (qui inclut toute personne présente dans le logement avec votre accord) suggère que ce cas n'est pas couvert. Les extraits ne précisent pas explicitement le cas d'un invité, mais l'exclusion est large et couvre les personnes présentes dans le logement.\n\nSi vous souhaitez une confirmation précise, il faudrait vérifier vos **conditions particulières** ou contacter MMA directement, car les exclusions peuvent varier selon les contrats.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MMA",
+        "page_pdf": 17,
+        "origine": "scan",
+        "score": 0.8657
+      },
+      {
+        "rang": 2,
+        "assureur": "MMA",
+        "page_pdf": 50,
+        "origine": "natif",
+        "score": 0.8651
+      },
+      {
+        "rang": 3,
+        "assureur": "MMA",
+        "page_pdf": 25,
+        "origine": "natif",
+        "score": 0.8635
+      },
+      {
+        "rang": 4,
+        "assureur": "MMA",
+        "page_pdf": 69,
+        "origine": "natif",
+        "score": 0.8594
+      },
+      {
+        "rang": 5,
+        "assureur": "MMA",
+        "page_pdf": 38,
+        "origine": "natif",
+        "score": 0.8561
+      },
+      {
+        "rang": 6,
+        "assureur": "MMA",
+        "page_pdf": 18,
+        "origine": "scan",
+        "score": 0.8561
+      },
+      {
+        "rang": 7,
+        "assureur": "MMA",
+        "page_pdf": 16,
+        "origine": "scan",
+        "score": 0.8558
+      },
+      {
+        "rang": 8,
+        "assureur": "MMA",
+        "page_pdf": 41,
+        "origine": "natif",
+        "score": 0.8541
+      }
+    ],
+    "tokens": {
+      "entree": 1226,
+      "sortie": 232
+    },
+    "erreur": null
+  },
+  {
+    "id": "P07",
+    "type": "comparative",
+    "question": "On m'a volé mon vélo dans la cave de l'immeuble. Je serais mieux couvert à la MAIF ou chez MMA ?",
+    "reponse": "Pour la **MAIF** :\n- Le vol de votre vélo dans la cave est couvert s'il s'agit d'un **vol avec effraction, ruse ou agression** [MAIF p.51].\n- **Plafond d'indemnisation** : Le montant maximum des dommages pris en considération est fixé à **2 000 €** pour un vol dans les caves ou dépendances auxquels vous ne pouvez accéder qu'en passant par des parties communes ou publiques [MAIF p.52, p.33, p.20].\n- **Exception** : Ce plafond ne s'applique pas si vous justifiez avoir fait effectuer des **travaux de renforcement de sécurité pour un montant d'au moins 300 €** [MAIF p.52, p.33, p.20].\n- **Franchise** : Aucune franchise spécifique n'est mentionnée pour ce cas dans les extraits fournis.\n\nPour **MMA** :\n- **Je ne trouve pas cette information dans les documents.** (Les extraits fournis ne contiennent aucune mention des conditions de garantie vol pour les caves ou dépendances chez MMA.)",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8748
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8655
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8655
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 20,
+        "origine": "natif",
+        "score": 0.8655
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8641
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.8622
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8616
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 54,
+        "origine": "natif",
+        "score": 0.8588
+      }
+    ],
+    "tokens": {
+      "entree": 1481,
+      "sortie": 248
+    },
+    "erreur": null
+  },
+  {
+    "id": "P08",
+    "type": "comparative",
+    "question": "Pour un vol de bijoux, laquelle de la MAIF ou de MMA rembourse le moins ?",
+    "reponse": "Pour répondre à votre question sur le remboursement des bijoux en cas de vol, voici les informations extraites des documents :\n\n**MAIF** :\n- MAIF couvre les bijoux en cas de vol dans le bien immobilier assuré, sous réserve des conditions générales du contrat [MAIF p.51].\n- Le montant maximum des dommages affectant vos effets personnels (dont les bijoux) est fixé à **2 000 €** [MAIF p.33].\n- MAIF applique une franchise de **1 500 €** pour les vols dans un bien immobilier dont le patrimoine objets précieux est supérieur à 82 000 € ou si le cumul du patrimoine mobilier usuel et du patrimoine objets précieux est supérieur à 110 000 € [MAIF p.21].\n- MAIF n'applique pas ces limitations si le vol est consécutif à un acte de violence ou à une agression [MAIF p.33, p.42].\n\n**MMA** :\n- MMA couvre les bijoux en cas de vol **uniquement si vous avez souscrit la garantie vol** [MMA p.38]. Le montant de remboursement n'est pas précisé dans l'extrait fourni.\n\n### Conclusion :\n- **MAIF** : Le remboursement maximal pour les bijoux est de **2 000 €**, avec une franchise de 1 500 € dans certains cas. Le remboursement peut donc être très limité (ex. : 500 € si franchise appliquée).\n- **MMA** : Le remboursement dépend de la garantie vol souscrite, mais le montant n'est pas précisé dans l'extrait.\n\n**Réponse** : D'après les extraits, **MAIF rembourse moins que MMA** dans le cas général, car MMA ne précise pas de plafond de remboursement pour les bijoux (sous réserve de la garantie vol), tandis que MAIF plafonne à 2 000 € avec une franchise possible de 1 500 €.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MMA",
+        "page_pdf": 38,
+        "origine": "natif",
+        "score": 0.8733
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8685
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 21,
+        "origine": "scan",
+        "score": 0.8664
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8655
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8647
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.8633
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8631
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8623
+      }
+    ],
+    "tokens": {
+      "entree": 1400,
+      "sortie": 445
+    },
+    "erreur": null
+  },
+  {
+    "id": "P09",
+    "type": "comparative",
+    "question": "Les voleurs sont entrés avec un double de mes clés, sans rien casser. La MAIF et MMA me remboursent-elles ?",
+    "reponse": "**MAIF :**\nNon, la MAIF ne rembourse pas dans ce cas. L'assurance couvre uniquement les vols ou tentatives de vol avec **effraction**, **ruse** ou **agression** [MAIF p.51]. L'entrée avec un double de clés ne constitue ni une effraction, ni une ruse, ni une agression.\n\n---\n\n**MMA :**\nJe ne trouve pas cette information dans les documents fournis.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8887
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8848
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8824
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8805
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8805
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 20,
+        "origine": "natif",
+        "score": 0.8805
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 76,
+        "origine": "natif",
+        "score": 0.8789
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8759
+      }
+    ],
+    "tokens": {
+      "entree": 1495,
+      "sortie": 93
+    },
+    "erreur": null
+  },
+  {
+    "id": "P10",
+    "type": "comparative",
+    "question": "Quelles protections (serrure, alarme) la MAIF, MMA et AXA exigent-elles pour couvrir le vol ?",
+    "reponse": "Voici les exigences de chaque assureur en matière de protections contre le vol, selon les extraits fournis :\n\n---\n\n### **MAIF**\n- **MAIF ne mentionne pas d'obligations spécifiques de serrures ou d'alarmes** dans les extraits fournis pour couvrir le vol.\n- Elle couvre le vol **lorsqu'il est commis avec effraction, ruse ou agression** [MAIF p.40, p.42, p.51].\n- **Aucune condition de protection minimale (serrure, alarme, etc.) n'est exigée** dans les extraits consultés.\n\n---\n\n### **MMA**\n- **Obligations de protection contre le vol** (selon le niveau de protection souscrit) :\n  - **Niveau CP 12 (niveau 1)** :\n    - Portes d'accès extérieures : **1 serrure** (si partie vitrée ou translucide, serrure à double entrée) [MMA p.18].\n    - Fenêtres/portes-fenêtres : **volets ou persiennes**, **barreaux métalliques**, **verre anti-effraction**, **verre feuilleté retardateur d'effraction**, ou **alarme** [MMA p.18].\n  - **Niveau CP 20 (niveau 2)** :\n    - Portes d'accès extérieures : **soit 2 serrures** (à double entrée si partie vitrée ou translucide) [MMA p.18].\n    - Fenêtres/portes-fenêtres : **alarme** (en maison) ou **alarme ou porte blindée avec cornières anti-pinces** (en appartement) [MMA p.18].\n  - **Niveau CP 30 (niveau 3)** :\n    - Portes d'accès extérieures : **soit 2 serrures** (à double entrée si partie vitrée ou translucide) [MMA p.18].\n    - Fenêtres/portes-fenêtres : **alarme** [MMA p.18].\n  - **Niveau CP 44 (niveau 4)** :\n    - Portes d'accès extérieures : **soit 2 serrures** (à double entrée si partie vitrée ou translucide) [MMA p.18].\n    - Fenêtres/portes-fenêtres : **alarme** [MMA p.18].\n- **Autres obligations** :\n  - En cas d'absence de plus de 24 heures, **fermer tous les volets ou persiennes** si ils constituent le seul moyen de protection [MMA p.18].\n  - **Perte de droit à indemnité** si les moyens de protection déclarés sont inexistants (et non simplement dysfonctionnels) lors du sinistre [MMA p.19].\n\n---\n\n### **AXA**\n- **AXA ne mentionne pas d'obligations spécifiques de serrures ou d'alarmes** dans l'extrait fourni pour couvrir le vol.\n- Elle couvre :\n  - Le **vol, la tentative de vol et le vandalisme** commis à l'intérieur de locaux privatifs clos et couverts, **si les circonstances détaillées peuvent être établies** [AXA p.9].\n  - Les **détériorations des constructions extérieures** ayant pour seul objet le vol ou la tentative de vol à l'intérieur des locaux privatifs [AXA p.9].\n  - Le **vol par agression** de vos objets de valeur lors de leur transport vers un établissement bancaire [AXA p.9].\n\n---\n### **Résumé**\n| Assureur | Serrure | Alarme | Autres obligations |\n|----------|---------|--------|---------------------|\n| **MAIF** | Aucune obligation mentionnée | Aucune obligation mentionnée | Aucune obligation mentionnée |\n| **MMA** | Obligatoire (selon niveau de protection) | Obligatoire (selon niveau de protection) | Fermer volets/persiennes si absence > 24h ; perte d'indemnité si protection inexistante |\n| **AXA** | Aucune obligation mentionnée | Aucune obligation mentionnée | Aucune obligation mentionnée |",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MMA",
+        "page_pdf": 18,
+        "origine": "scan",
+        "score": 0.8887
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8855
+      },
+      {
+        "rang": 3,
+        "assureur": "MMA",
+        "page_pdf": 18,
+        "origine": "scan",
+        "score": 0.8828
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8825
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.8819
+      },
+      {
+        "rang": 6,
+        "assureur": "AXA",
+        "page_pdf": 9,
+        "origine": "scan",
+        "score": 0.8797
+      },
+      {
+        "rang": 7,
+        "assureur": "MMA",
+        "page_pdf": 19,
+        "origine": "scan",
+        "score": 0.8784
+      },
+      {
+        "rang": 8,
+        "assureur": "MMA",
+        "page_pdf": 19,
+        "origine": "scan",
+        "score": 0.8784
+      }
+    ],
+    "tokens": {
+      "entree": 1991,
+      "sortie": 917
+    },
+    "erreur": null
+  },
+  {
+    "id": "P11",
+    "type": "page scannée",
+    "question": "J'ai environ 90 000 € de bijoux. Quelle franchise la MAIF applique en cas de vol ?",
+    "reponse": "Pour un patrimoine objets précieux déclaré de 90 000 € (inférieur à 82 000 € ? Non, car 90 000 € > 82 000 €), la franchise applicable est de **1 500 €** [MAIF p.21].\n\n*Remarque : Le document est édité en 2026-05, il peut être périmé et le contrat actuel peut différer.*",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 21,
+        "origine": "scan",
+        "score": 0.9033
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 21,
+        "origine": "scan",
+        "score": 0.8982
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8981
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8981
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8815
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8815
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 104,
+        "origine": "natif",
+        "score": 0.8794
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 21,
+        "origine": "scan",
+        "score": 0.8787
+      }
+    ],
+    "tokens": {
+      "entree": 1487,
+      "sortie": 104
+    },
+    "erreur": null
+  },
+  {
+    "id": "P12",
+    "type": "page scannée",
+    "question": "La MAIF m'a remboursé un cambriolage l'an dernier. Si ça recommence au même endroit, je paie plus ?",
+    "reponse": "Oui, selon les conditions générales de la MAIF [MAIF p.21], la franchise est triplée si, dans les 12 mois précédant le vol, MAIF vous a versé une indemnité au titre de ce contrat pour un sinistre de même nature survenu dans le lieu assuré.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 21,
+        "origine": "scan",
+        "score": 0.873
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 51,
+        "origine": "scan",
+        "score": 0.8712
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 62,
+        "origine": "natif",
+        "score": 0.8689
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 20,
+        "origine": "natif",
+        "score": 0.8688
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8688
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8688
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 53,
+        "origine": "scan",
+        "score": 0.8662
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8659
+      }
+    ],
+    "tokens": {
+      "entree": 1309,
+      "sortie": 68
+    },
+    "erreur": null
+  },
+  {
+    "id": "P13",
+    "type": "page scannée",
+    "question": "La MAIF m'a remboursé un vol il y a six mois. On vient de me voler des affaires dans ma cave, dont j'avais fait renforcer la porte pour 400 €. Ma franchise est-elle triplée ?",
+    "reponse": "D'après les extraits fournis pour la MAIF :\n\n1. La franchise est normalement triplée si, dans les 12 mois précédant le vol, la MAIF a versé une indemnité pour un sinistre de même nature (vol) dans le lieu assuré [MAIF p.21, p.52, p.33].\n2. Cependant, ce triplement ne s'applique pas en cas de vol dans les caves ou dépendances si vous justifiez avoir effectué des travaux de renforcement de sécurité pour un montant d'au moins 300 € [MAIF p.21, p.52, p.33].\n\nDans votre situation :\n- La MAIF vous a remboursé un vol il y a six mois (dans les 12 mois).\n- Le nouveau vol concerne votre cave, et vous avez fait renforcer la porte pour 400 € (supérieur à 300 €).\n\n**Votre franchise ne sera donc pas triplée** pour ce nouveau vol dans la cave, car vous avez effectué des travaux de renforcement de sécurité pour un montant supérieur à 300 € [MAIF p.21, p.52, p.33].",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 21,
+        "origine": "scan",
+        "score": 0.9319
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.9035
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.9035
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8997
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8997
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 20,
+        "origine": "natif",
+        "score": 0.8997
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8907
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8907
+      }
+    ],
+    "tokens": {
+      "entree": 1440,
+      "sortie": 260
+    },
+    "erreur": null
+  },
+  {
+    "id": "P14",
+    "type": "terme exact",
+    "question": "Dans le contrat MAIF M5202AHA, qu'est-ce qu'on appelle des « objets précieux » ?",
+    "reponse": "Voici la définition des **« objets précieux »** selon le contrat **MAIF M5202AHA** (édition 2026-05) :\n\n1. **Par nature** (valeur non précisée, mais considérés comme précieux) :\n   - Bijoux et objets à usage domestique ou décoratif en métal précieux (or, platine, argent massif, vermeil) [MAIF p.104].\n   - Pierres précieuses, pierres fines, pierres dures, perles fines et de culture, montées sur or ou sur platine [MAIF p.104].\n\n2. **Par valeur individuelle** (à partir de 2 000 €) :\n   - Bijoux et montres, quel qu'en soit le métal, dont la marque est renommée [MAIF p.104].\n   - Peintures, dessins, gravures, lithographies, photographies [MAIF p.104].\n\n**Remarque** :\n- Les objets précieux sont soumis à une **limite globale de 4 000 €** (sauf déclaration spécifique si leur valeur dépasse ce seuil) [MAIF p.47, p.15, p.28].\n- Ils sont **exclus des garanties** dans certains cas (ex. : vêtements de fourrure ou de peau) [MAIF p.53, p.43].",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 47,
+        "origine": "natif",
+        "score": 0.9005
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 15,
+        "origine": "natif",
+        "score": 0.8974
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 93,
+        "origine": "natif",
+        "score": 0.8806
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 104,
+        "origine": "natif",
+        "score": 0.8765
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 53,
+        "origine": "scan",
+        "score": 0.8715
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 43,
+        "origine": "natif",
+        "score": 0.8673
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 28,
+        "origine": "natif",
+        "score": 0.861
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 21,
+        "origine": "scan",
+        "score": 0.8571
+      }
+    ],
+    "tokens": {
+      "entree": 1647,
+      "sortie": 301
+    },
+    "erreur": null
+  },
+  {
+    "id": "P15",
+    "type": "terme exact",
+    "question": "Qu'est-ce qui est exclu de la garantie vol dans les CG MMA n° 410 S ?",
+    "reponse": "Voici les exclusions de la garantie **vol** dans les **CG MMA n° 410 S (édition 2024-07)** :\n\n1. **Biens immobiliers** :\n   - Les biens immobiliers vous appartenant ou que vous louez à l'année [MMA p.27].\n\n2. **Véhicules et engins motorisés** :\n   - Les dommages impliquant un véhicule terrestre à moteur, une remorque, une caravane, un voilier, un bateau ou un engin nautique à moteur nécessitant un permis de navigation [MMA p.27].\n\n3. **Bijoux et objets précieux en cas d'inhabitation** :\n   - La garantie vol sur les bijoux et objets en or, argent, platine, pierreries, perles fines et orfèvreries est accordée uniquement en période d'habitation. Les autres objets à risque de vol sont couverts quel que soit la durée d'inhabitation [MMA p.69].\n\n4. **Exclusions générales** :\n   - Les exclusions spécifiques à chaque garantie s'appliquent également [MMA p.59].\n\nSi la question porte sur un cas particulier (ex. : vol d'un véhicule, bijou volé pendant une absence prolongée), précisez-le pour une réponse plus ciblée.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MMA",
+        "page_pdf": 17,
+        "origine": "scan",
+        "score": 0.8666
+      },
+      {
+        "rang": 2,
+        "assureur": "MMA",
+        "page_pdf": 38,
+        "origine": "natif",
+        "score": 0.859
+      },
+      {
+        "rang": 3,
+        "assureur": "MMA",
+        "page_pdf": 69,
+        "origine": "natif",
+        "score": 0.8579
+      },
+      {
+        "rang": 4,
+        "assureur": "MMA",
+        "page_pdf": 59,
+        "origine": "natif",
+        "score": 0.8565
+      },
+      {
+        "rang": 5,
+        "assureur": "MMA",
+        "page_pdf": 52,
+        "origine": "natif",
+        "score": 0.856
+      },
+      {
+        "rang": 6,
+        "assureur": "MMA",
+        "page_pdf": 27,
+        "origine": "natif",
+        "score": 0.8543
+      },
+      {
+        "rang": 7,
+        "assureur": "MMA",
+        "page_pdf": 9,
+        "origine": "natif",
+        "score": 0.8503
+      },
+      {
+        "rang": 8,
+        "assureur": "MMA",
+        "page_pdf": 7,
+        "origine": "natif",
+        "score": 0.85
+      }
+    ],
+    "tokens": {
+      "entree": 1082,
+      "sortie": 289
+    },
+    "erreur": null
+  },
+  {
+    "id": "P16",
+    "type": "obsolescence",
+    "question": "Chez AXA, mes bijoux volés sont-ils remboursés, et jusqu'à combien ?",
+    "reponse": "D'après les extraits fournis pour AXA (édition 2009-04, donc potentiellement périmée) :\n\n1. **Les bijoux sont couverts** s'ils font partie des objets assurés dans votre habitation ou dépendances [AXA p.6].\n2. **Le plafond de garantie pour les objets de valeur** (dont les bijoux) dépend de leur valeur unitaire :\n   - Si un bijou a une valeur **supérieure à 0,45 indice**, il est considéré comme un objet de valeur et est soumis à des règles spécifiques [AXA p.52].\n   - Cependant, **le montant maximal de garantie par sinistre pour les objets mobiliers (y compris bijoux) est de 2 000 euros**, vétusté déduite [AXA p.35].\n\n**Réponse :**\nOui, vos bijoux volés sont remboursés s'ils sont assurés dans votre habitation, mais **le remboursement est limité à 2 000 euros par sinistre** (vétusté déduite), sous réserve que leur valeur unitaire dépasse 0,45 indice (sinon, ils sont couverts dans la limite globale des 2 000 euros).",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "AXA",
+        "page_pdf": 30,
+        "origine": "natif",
+        "score": 0.8789
+      },
+      {
+        "rang": 2,
+        "assureur": "AXA",
+        "page_pdf": 38,
+        "origine": "natif",
+        "score": 0.8789
+      },
+      {
+        "rang": 3,
+        "assureur": "AXA",
+        "page_pdf": 45,
+        "origine": "natif",
+        "score": 0.8748
+      },
+      {
+        "rang": 4,
+        "assureur": "AXA",
+        "page_pdf": 29,
+        "origine": "natif",
+        "score": 0.871
+      },
+      {
+        "rang": 5,
+        "assureur": "AXA",
+        "page_pdf": 38,
+        "origine": "natif",
+        "score": 0.871
+      },
+      {
+        "rang": 6,
+        "assureur": "AXA",
+        "page_pdf": 6,
+        "origine": "natif",
+        "score": 0.8661
+      },
+      {
+        "rang": 7,
+        "assureur": "AXA",
+        "page_pdf": 52,
+        "origine": "natif",
+        "score": 0.8652
+      },
+      {
+        "rang": 8,
+        "assureur": "AXA",
+        "page_pdf": 35,
+        "origine": "natif",
+        "score": 0.8596
+      }
+    ],
+    "tokens": {
+      "entree": 1207,
+      "sortie": 272
+    },
+    "erreur": null
+  },
+  {
+    "id": "P17",
+    "type": "obsolescence",
+    "question": "Chez AXA, que dois-je faire et dans quel délai après un cambriolage ?",
+    "reponse": "Après un cambriolage chez AXA, voici les démarches et délais à respecter selon les extraits fournis :\n\n1. **Déclaration du sinistre** :\n   - Vous devez déclarer le sinistre **dans les 2 jours ouvrés** à partir du moment où vous en avez eu connaissance [AXA p.44].\n\n2. **Mesures immédiates** :\n   - Vous devez prendre immédiatement toutes les mesures nécessaires pour sauvegarder vos biens et limiter l'importance des dommages [AXA p.44].\n   - En cas de vol, vous devez **porter plainte dans les 24 heures** [AXA p.44].\n\n3. **Transmission des informations après la déclaration** :\n   - Vous devez transmettre à AXA, **dans les 5 jours** à compter du sinistre, un état estimatif, signé, des biens détruits, disparus ou endommagés. Un exemplaire de cet état estimatif doit également être adressé aux autorités compétentes (police, gendarmerie) [AXA p.44].\n   - Vous devez également fournir tous les éléments et documents dont vous disposez pour prouver l'existence et la valeur des biens sinistrés ainsi que l'importance des dommages [AXA p.44].\n\n4. **Récupération des objets volés** :\n   - Si vous récupérez des objets volés, vous devez **aviser AXA de cette récupération** [AXA p.45].\n\n**Note** : Les documents fournis datent de 2009 et peuvent être périmés. Le contrat actuel peut différer.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "AXA",
+        "page_pdf": 44,
+        "origine": "natif",
+        "score": 0.8694
+      },
+      {
+        "rang": 2,
+        "assureur": "AXA",
+        "page_pdf": 44,
+        "origine": "natif",
+        "score": 0.861
+      },
+      {
+        "rang": 3,
+        "assureur": "AXA",
+        "page_pdf": 45,
+        "origine": "natif",
+        "score": 0.8589
+      },
+      {
+        "rang": 4,
+        "assureur": "AXA",
+        "page_pdf": 6,
+        "origine": "natif",
+        "score": 0.8557
+      },
+      {
+        "rang": 5,
+        "assureur": "AXA",
+        "page_pdf": 44,
+        "origine": "natif",
+        "score": 0.8544
+      },
+      {
+        "rang": 6,
+        "assureur": "AXA",
+        "page_pdf": 47,
+        "origine": "natif",
+        "score": 0.8533
+      },
+      {
+        "rang": 7,
+        "assureur": "AXA",
+        "page_pdf": 47,
+        "origine": "natif",
+        "score": 0.8507
+      },
+      {
+        "rang": 8,
+        "assureur": "AXA",
+        "page_pdf": 19,
+        "origine": "natif",
+        "score": 0.8492
+      }
+    ],
+    "tokens": {
+      "entree": 1417,
+      "sortie": 348
+    },
+    "erreur": null
+  },
+  {
+    "id": "P18",
+    "type": "obsolescence (hors thème)",
+    "question": "Je suis chez AXA. Est-ce que je peux résilier mon assurance habitation quand je veux ?",
+    "reponse": "D'après les extraits fournis pour AXA (édition 2009-04, qui peut être périmée), **vous ne pouvez pas résilier votre assurance habitation quand vous voulez**. Voici les cas où la résiliation est possible et leurs modalités :\n\n1. **À l'échéance annuelle** :\n   - Vous pouvez résilier en envoyant une demande au plus tard **2 mois avant la date d'échéance** (le cachet de la poste faisant foi).\n   - Si AXA ne répond pas dans un délai d'1 mois après votre envoi, la résiliation est considérée comme acceptée [AXA p.41].\n\n2. **En cas de changement de situation** (déménagement, changement de situation matrimoniale, professionnelle, retraite, etc.) :\n   - Vous pouvez résilier **dans les 3 mois suivant l'événement**.\n   - La résiliation prend effet **1 mois après réception de la lettre recommandée avec AR** [AXA p.41].\n\n3. **Autres cas spécifiques** (non \"quand vous voulez\") :\n   - **Diminution du risque** si AXA ne consent pas à une baisse de cotisation correspondante [AXA p.41].\n   - **Modification de la cotisation par AXA** (hors conséquence de l'indice) [AXA p.41].\n   - **Résiliation par AXA après un sinistre** sur un de vos contrats [AXA p.41].\n   - **Non-paiement de la cotisation** [AXA p.41].\n   - **Omission ou déclaration inexacte** [AXA p.41].\n   - **Aggravation du risque** [AXA p.41].\n   - **Transfert de propriété des biens garantis** [AXA p.41].\n   - **Perte totale des biens garantis** due à un événement non garanti [AXA p.41].\n   - **Redressement ou liquidation judiciaire** (vous, l'administrateur ou AXA) [AXA p.41].\n\n**En résumé** : La résiliation n'est possible qu'à des moments précis (échéance, changement de situation, etc.) ou dans des circonstances spécifiques listées. Elle ne peut pas être effectuée librement à tout moment.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "AXA",
+        "page_pdf": 41,
+        "origine": "natif",
+        "score": 0.8828
+      },
+      {
+        "rang": 2,
+        "assureur": "AXA",
+        "page_pdf": 41,
+        "origine": "natif",
+        "score": 0.8812
+      },
+      {
+        "rang": 3,
+        "assureur": "AXA",
+        "page_pdf": 39,
+        "origine": "natif",
+        "score": 0.8775
+      },
+      {
+        "rang": 4,
+        "assureur": "AXA",
+        "page_pdf": 41,
+        "origine": "natif",
+        "score": 0.8656
+      },
+      {
+        "rang": 5,
+        "assureur": "AXA",
+        "page_pdf": 39,
+        "origine": "natif",
+        "score": 0.8638
+      },
+      {
+        "rang": 6,
+        "assureur": "AXA",
+        "page_pdf": 6,
+        "origine": "natif",
+        "score": 0.8611
+      },
+      {
+        "rang": 7,
+        "assureur": "AXA",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8607
+      },
+      {
+        "rang": 8,
+        "assureur": "AXA",
+        "page_pdf": 21,
+        "origine": "natif",
+        "score": 0.8603
+      }
+    ],
+    "tokens": {
+      "entree": 1705,
+      "sortie": 508
+    },
+    "erreur": null
+  },
+  {
+    "id": "P19",
+    "type": "hors corpus",
+    "question": "Combien me coûterait une meilleure garantie vol à la MAIF ?",
+    "reponse": "Je ne trouve pas cette information dans les documents.\nLes extraits ne précisent ni les tarifs des options ni les modalités de souscription à une garantie vol améliorée. Pour connaître le coût d’une meilleure garantie vol, consultez vos **conditions particulières** ou contactez MAIF.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MAIF",
+        "page_pdf": 61,
+        "origine": "natif",
+        "score": 0.8773
+      },
+      {
+        "rang": 2,
+        "assureur": "MAIF",
+        "page_pdf": 61,
+        "origine": "natif",
+        "score": 0.8751
+      },
+      {
+        "rang": 3,
+        "assureur": "MAIF",
+        "page_pdf": 42,
+        "origine": "natif",
+        "score": 0.8732
+      },
+      {
+        "rang": 4,
+        "assureur": "MAIF",
+        "page_pdf": 41,
+        "origine": "natif",
+        "score": 0.871
+      },
+      {
+        "rang": 5,
+        "assureur": "MAIF",
+        "page_pdf": 52,
+        "origine": "scan",
+        "score": 0.8695
+      },
+      {
+        "rang": 6,
+        "assureur": "MAIF",
+        "page_pdf": 62,
+        "origine": "natif",
+        "score": 0.8677
+      },
+      {
+        "rang": 7,
+        "assureur": "MAIF",
+        "page_pdf": 55,
+        "origine": "natif",
+        "score": 0.8663
+      },
+      {
+        "rang": 8,
+        "assureur": "MAIF",
+        "page_pdf": 33,
+        "origine": "natif",
+        "score": 0.8657
+      }
+    ],
+    "tokens": {
+      "entree": 1502,
+      "sortie": 65
+    },
+    "erreur": null
+  },
+  {
+    "id": "P20",
+    "type": "hors corpus",
+    "question": "Mon assurance auto MMA couvre-t-elle le vol de ma voiture ?",
+    "reponse": "Je ne trouve pas cette information dans les documents fournis. Les extraits concernent uniquement l'assurance habitation MMA et ne mentionnent pas les garanties liées à l'assurance auto.",
+    "extraits": [
+      {
+        "rang": 1,
+        "assureur": "MMA",
+        "page_pdf": 41,
+        "origine": "natif",
+        "score": 0.8798
+      },
+      {
+        "rang": 2,
+        "assureur": "MMA",
+        "page_pdf": 38,
+        "origine": "natif",
+        "score": 0.8764
+      },
+      {
+        "rang": 3,
+        "assureur": "MMA",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.8725
+      },
+      {
+        "rang": 4,
+        "assureur": "MMA",
+        "page_pdf": 17,
+        "origine": "scan",
+        "score": 0.8703
+      },
+      {
+        "rang": 5,
+        "assureur": "MMA",
+        "page_pdf": 16,
+        "origine": "scan",
+        "score": 0.8684
+      },
+      {
+        "rang": 6,
+        "assureur": "MMA",
+        "page_pdf": 40,
+        "origine": "natif",
+        "score": 0.8634
+      },
+      {
+        "rang": 7,
+        "assureur": "MMA",
+        "page_pdf": 69,
+        "origine": "natif",
+        "score": 0.8631
+      },
+      {
+        "rang": 8,
+        "assureur": "MMA",
+        "page_pdf": 35,
+        "origine": "natif",
+        "score": 0.8631
+      }
+    ],
+    "tokens": {
+      "entree": 1181,
+      "sortie": 40
+    },
+    "erreur": null
+  }
+]

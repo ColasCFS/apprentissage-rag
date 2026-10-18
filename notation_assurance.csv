@@ -1,0 +1,105 @@
+﻿id;question;reponse_attendue;reponse_generee;verdict_colas;justification
+P01;On m'a cambriolé. Qu'est-ce que je dois faire pour être remboursé par la MAIF ?;Déclarer le vol aux autorités de police ou de gendarmerie, puis transmettre à la MAIF le récépissé de cette déclaration.;"Voici les étapes à suivre pour être remboursé par la MAIF après un cambriolage, selon les extraits fournis :
+
+1. **Déclaration du vol** :
+   - Vous devez déclarer le vol à la MAIF dès que possible, notamment si vous récupérez les objets volés [MAIF p.21, p.34, p.53].
+
+2. **Conditions de prise en charge** :
+   - Les biens mobiliers volés à l'intérieur du logement, d'une dépendance, d'une yourte, d'un mobil-home, d'une tiny house ou d'un local à usage utilitaire déclaré sont couverts s'ils ont été volés ou détériorés à l'occasion d'un vol avec **effraction**, **ruse** ou **agression**, ou d'une tentative de vol [MAIF p.51].
+   - Les détériorations des biens immobiliers assurés commises à l'occasion d'une intrusion, d'un vol ou d'une tentative de vol sont également couvertes [MAIF p.51].
+
+3. **Absence de franchise en cas d'agression** :
+   - La franchise ne s'applique pas si le vol est consécutif à un acte de violence ou à une agression [MAIF p.42].
+
+4. **Biens prêtés** :
+   - Les biens mobiliers que vous avez prêtés à un tiers sont garantis s'ils sont endommagés par celui-ci [MAIF p.48].
+
+5. **Garantie panne** :
+   - Vous bénéficiez également d'une garantie panne [MAIF p.48].
+
+**À noter** :
+- Si les biens volés étaient transportés dans ou sur un véhicule terrestre, une remorque ou un bateau, reportez-vous aux **dispositions particulières** du contrat [MAIF p.42].
+- Les conditions de remboursement peuvent dépendre de la formule choisie et des plafonds définis dans vos **conditions particulières**. Si ces informations ne sont pas dans les extraits, consultez votre contrat.
+
+Si vous avez récupéré les objets volés, informez-en immédiatement la MAIF [MAIF p.21, p.34, p.53].";;
+P02;On m'a volé des affaires alors que j'avais laissé la fenêtre ouverte. MMA rembourse ?;"En principe oui : entrer par une fenêtre relève de l'escalade (introduction par une ouverture non destinée à servir d'entrée), mode de commission couvert. Réserve : en cas d'absence de plus de 24 h, l'assuré doit fermer fenêtres et portes-fenêtres ; ne pas l'avoir fait peut affecter la garantie.";"D'après les extraits fournis pour MMA :
+
+- Le non-respect des conditions de garantie (comme la fermeture des fenêtres) peut entraîner une réduction de 50% de l'indemnité si le vol est dû à ce non-respect [MMA p.19].
+- Vous perdez tout droit à indemnité si le non-respect de la protection de base a permis ou facilité le vol [MMA p.18].
+- Vous perdez également tout droit à indemnité si vous avez répondu faussement disposer des moyens de protection exigés (comme des fenêtres fermées), si leur inexistence est constatée lors du sinistre [MMA p.19].
+
+**Réponse :**
+MMA ne remboursera pas si le vol est dû au fait d'avoir laissé la fenêtre ouverte, car cela constitue un non-respect des conditions de garantie pouvant entraîner une perte totale ou une réduction de 50% de l'indemnité. [MMA p.18-19]";;
+P05;Des voleurs ont essayé d'entrer sans y arriver, mais ils ont abîmé ma porte. La MAIF paie la réparation ?;"Oui, la tentative de vol est couverte. Si vous êtes occupant, les détériorations sont prises en charge dans la limite de 1 600 € HT, remplacement à l'identique des clés et serrures privatives compris ; si vous êtes propriétaire, les détériorations sont couvertes sans ce plafond de 1 600 €. Exclus : clés, serrures et systèmes de fermeture des parties collectives d'immeubles.";"[MAIF p.20, p.33, p.51]
+Oui, la MAIF prend en charge les détériorations des biens immobiliers assurés commises à l'occasion d'une tentative de vol, lorsqu'elles affectent un bien dont vous êtes propriétaire [MAIF p.20, p.33, p.51].";;
+P07;On m'a volé mon vélo dans la cave de l'immeuble. Je serais mieux couvert à la MAIF ou chez MMA ?;Cela dépend du capital assuré. MAIF : vol en cave ou dépendance plafonné à 2 000 €. MMA : vol en cave couvert à hauteur de 4 % du capital « biens mobiliers d'habitation » fixé aux conditions particulières, donc MMA couvre mieux au-delà de 50 000 € de capital (2 000 / 0,04). Réserve MMA : sont exclus les biens déposés dans des locaux à usage commun et les objets à risque de vol situés dans des dépendances sans communication directe avec l'habitation.;"Pour la **MAIF** :
+- Le vol de votre vélo dans la cave est couvert s'il s'agit d'un **vol avec effraction, ruse ou agression** [MAIF p.51].
+- **Plafond d'indemnisation** : Le montant maximum des dommages pris en considération est fixé à **2 000 €** pour un vol dans les caves ou dépendances auxquels vous ne pouvez accéder qu'en passant par des parties communes ou publiques [MAIF p.52, p.33, p.20].
+- **Exception** : Ce plafond ne s'applique pas si vous justifiez avoir fait effectuer des **travaux de renforcement de sécurité pour un montant d'au moins 300 €** [MAIF p.52, p.33, p.20].
+- **Franchise** : Aucune franchise spécifique n'est mentionnée pour ce cas dans les extraits fournis.
+
+Pour **MMA** :
+- **Je ne trouve pas cette information dans les documents.** (Les extraits fournis ne contiennent aucune mention des conditions de garantie vol pour les caves ou dépendances chez MMA.)";;
+P11;J'ai environ 90 000 € de bijoux. Quelle franchise la MAIF applique en cas de vol ?;1 500 €, car le patrimoine d'objets précieux dépasse 82 000 €. Exception : si les moyens de protection prévus aux conditions particulières étaient en place et activés pendant l'absence, c'est la franchise choisie au contrat qui s'applique.;"Pour un patrimoine objets précieux déclaré de 90 000 € (inférieur à 82 000 € ? Non, car 90 000 € > 82 000 €), la franchise applicable est de **1 500 €** [MAIF p.21].
+
+*Remarque : Le document est édité en 2026-05, il peut être périmé et le contrat actuel peut différer.*";;
+P13;La MAIF m'a remboursé un vol il y a six mois. On vient de me voler des affaires dans ma cave, dont j'avais fait renforcer la porte pour 400 €. Ma franchise est-elle triplée ?;Non : le triplement ne s'applique pas à un vol dans une cave ou une dépendance quand on justifie de travaux de renforcement de sécurité d'au moins 300 €.;"D'après les extraits fournis pour la MAIF :
+
+1. La franchise est normalement triplée si, dans les 12 mois précédant le vol, la MAIF a versé une indemnité pour un sinistre de même nature (vol) dans le lieu assuré [MAIF p.21, p.52, p.33].
+2. Cependant, ce triplement ne s'applique pas en cas de vol dans les caves ou dépendances si vous justifiez avoir effectué des travaux de renforcement de sécurité pour un montant d'au moins 300 € [MAIF p.21, p.52, p.33].
+
+Dans votre situation :
+- La MAIF vous a remboursé un vol il y a six mois (dans les 12 mois).
+- Le nouveau vol concerne votre cave, et vous avez fait renforcer la porte pour 400 € (supérieur à 300 €).
+
+**Votre franchise ne sera donc pas triplée** pour ce nouveau vol dans la cave, car vous avez effectué des travaux de renforcement de sécurité pour un montant supérieur à 300 € [MAIF p.21, p.52, p.33].";;
+P16;Chez AXA, mes bijoux volés sont-ils remboursés, et jusqu'à combien ?;"Selon les conditions générales AXA d'avril 2009 : jusqu'à 3 000 € ; au-delà, une porte blindée est exigée. Le système doit signaler que le document date de 2009 et que les montants actuels peuvent être différents.";"D'après les extraits fournis pour AXA (édition 2009-04, donc potentiellement périmée) :
+
+1. **Les bijoux sont couverts** s'ils font partie des objets assurés dans votre habitation ou dépendances [AXA p.6].
+2. **Le plafond de garantie pour les objets de valeur** (dont les bijoux) dépend de leur valeur unitaire :
+   - Si un bijou a une valeur **supérieure à 0,45 indice**, il est considéré comme un objet de valeur et est soumis à des règles spécifiques [AXA p.52].
+   - Cependant, **le montant maximal de garantie par sinistre pour les objets mobiliers (y compris bijoux) est de 2 000 euros**, vétusté déduite [AXA p.35].
+
+**Réponse :**
+Oui, vos bijoux volés sont remboursés s'ils sont assurés dans votre habitation, mais **le remboursement est limité à 2 000 euros par sinistre** (vétusté déduite), sous réserve que leur valeur unitaire dépasse 0,45 indice (sinon, ils sont couverts dans la limite globale des 2 000 euros).";;
+P17;Chez AXA, que dois-je faire et dans quel délai après un cambriolage ?;Selon les conditions générales AXA d'avril 2009 : porter plainte dans les 24 h et déclarer le vol à AXA dans les 2 jours ouvrés suivant sa découverte. Le système doit signaler que le document date de 2009.;"Après un cambriolage chez AXA, voici les démarches et délais à respecter selon les extraits fournis :
+
+1. **Déclaration du sinistre** :
+   - Vous devez déclarer le sinistre **dans les 2 jours ouvrés** à partir du moment où vous en avez eu connaissance [AXA p.44].
+
+2. **Mesures immédiates** :
+   - Vous devez prendre immédiatement toutes les mesures nécessaires pour sauvegarder vos biens et limiter l'importance des dommages [AXA p.44].
+   - En cas de vol, vous devez **porter plainte dans les 24 heures** [AXA p.44].
+
+3. **Transmission des informations après la déclaration** :
+   - Vous devez transmettre à AXA, **dans les 5 jours** à compter du sinistre, un état estimatif, signé, des biens détruits, disparus ou endommagés. Un exemplaire de cet état estimatif doit également être adressé aux autorités compétentes (police, gendarmerie) [AXA p.44].
+   - Vous devez également fournir tous les éléments et documents dont vous disposez pour prouver l'existence et la valeur des biens sinistrés ainsi que l'importance des dommages [AXA p.44].
+
+4. **Récupération des objets volés** :
+   - Si vous récupérez des objets volés, vous devez **aviser AXA de cette récupération** [AXA p.45].
+
+**Note** : Les documents fournis datent de 2009 et peuvent être périmés. Le contrat actuel peut différer.";;
+P18;Je suis chez AXA. Est-ce que je peux résilier mon assurance habitation quand je veux ?;Le document AXA prévoit une résiliation à l'échéance annuelle, mais il date d'avril 2009, avant la loi Hamon de 2014, qui permet de résilier une assurance habitation à tout moment après un an d'engagement. Le système doit signaler que la règle du document est probablement dépassée et inviter à vérifier les conditions actuelles.;"D'après les extraits fournis pour AXA (édition 2009-04, qui peut être périmée), **vous ne pouvez pas résilier votre assurance habitation quand vous voulez**. Voici les cas où la résiliation est possible et leurs modalités :
+
+1. **À l'échéance annuelle** :
+   - Vous pouvez résilier en envoyant une demande au plus tard **2 mois avant la date d'échéance** (le cachet de la poste faisant foi).
+   - Si AXA ne répond pas dans un délai d'1 mois après votre envoi, la résiliation est considérée comme acceptée [AXA p.41].
+
+2. **En cas de changement de situation** (déménagement, changement de situation matrimoniale, professionnelle, retraite, etc.) :
+   - Vous pouvez résilier **dans les 3 mois suivant l'événement**.
+   - La résiliation prend effet **1 mois après réception de la lettre recommandée avec AR** [AXA p.41].
+
+3. **Autres cas spécifiques** (non ""quand vous voulez"") :
+   - **Diminution du risque** si AXA ne consent pas à une baisse de cotisation correspondante [AXA p.41].
+   - **Modification de la cotisation par AXA** (hors conséquence de l'indice) [AXA p.41].
+   - **Résiliation par AXA après un sinistre** sur un de vos contrats [AXA p.41].
+   - **Non-paiement de la cotisation** [AXA p.41].
+   - **Omission ou déclaration inexacte** [AXA p.41].
+   - **Aggravation du risque** [AXA p.41].
+   - **Transfert de propriété des biens garantis** [AXA p.41].
+   - **Perte totale des biens garantis** due à un événement non garanti [AXA p.41].
+   - **Redressement ou liquidation judiciaire** (vous, l'administrateur ou AXA) [AXA p.41].
+
+**En résumé** : La résiliation n'est possible qu'à des moments précis (échéance, changement de situation, etc.) ou dans des circonstances spécifiques listées. Elle ne peut pas être effectuée librement à tout moment.";;
+P19;Combien me coûterait une meilleure garantie vol à la MAIF ?;refus;"Je ne trouve pas cette information dans les documents.
+Les extraits ne précisent ni les tarifs des options ni les modalités de souscription à une garantie vol améliorée. Pour connaître le coût d’une meilleure garantie vol, consultez vos **conditions particulières** ou contactez MAIF.";;

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "P01",
+    "type": "simple",
+    "verdict": "partielle",
+    "justification": "La réponse générée inclut des éléments supplémentaires non demandés (conditions de prise en charge, franchise, etc.) mais omet l'élément clé de la réponse attendue : déclarer le vol aux autorités de police ou de gendarmerie et transmettre le récépissé à la MAIF."
+  },
+  {
+    "id": "P02",
+    "type": "simple",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents : principe de remboursement en cas d'escalade, réserve sur l'absence de plus de 24h et obligation de fermer fenêtres."
+  },
+  {
+    "id": "P03",
+    "type": "simple",
+    "verdict": "refus_a_tort",
+    "justification": "La réponse générée contient explicitement les éléments clés de la réponse attendue, mais le modèle affirme à tort ne pas trouver l'information dans les documents."
+  },
+  {
+    "id": "P04",
+    "type": "simple",
+    "verdict": "partielle",
+    "justification": "La réponse générée mentionne correctement les obligations de fermeture en cas d'absence de plus de 24h, mais elle ne précise pas explicitement que le vol est couvert si ces obligations ont été respectées, contrairement à la réponse attendue."
+  },
+  {
+    "id": "P05",
+    "type": "simple",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement mentionnés."
+  },
+  {
+    "id": "P06",
+    "type": "simple",
+    "verdict": "juste",
+    "justification": "La réponse générée reprend correctement tous les éléments clés de la réponse attendue (exclusions des vols par des occupants temporaires ou personnes présentes avec accord, et absence de couverture pour ce cas)."
+  },
+  {
+    "id": "P07",
+    "type": "comparative",
+    "verdict": "partielle",
+    "justification": "La réponse générée couvre correctement les conditions de la MAIF mais ne fournit aucune information sur MMA, alors que la réponse attendue détaille les deux assurances."
+  },
+  {
+    "id": "P08",
+    "type": "comparative",
+    "verdict": "fausse",
+    "justification": "La réponse générée affirme à tort que MAIF rembourse moins que MMA, alors que la réponse attendue indique qu'il est impossible de conclure."
+  },
+  {
+    "id": "P09",
+    "type": "comparative",
+    "verdict": "fausse",
+    "justification": "La réponse générée pour la MAIF affirme à tort que l'entrée avec un double de clés n'est pas couverte, alors que la réponse attendue indique que c'est incertain et nécessite une vérification."
+  },
+  {
+    "id": "P10",
+    "type": "comparative",
+    "verdict": "fausse",
+    "justification": "La réponse générée attribue à AXA et MAIF des exigences de protection (serrure, alarme) qui ne correspondent pas à la réponse attendue, où ces assureurs n'imposent pas de protections minimales."
+  },
+  {
+    "id": "P11",
+    "type": "page scannée",
+    "verdict": "juste",
+    "justification": "La réponse générée mentionne correctement la franchise de 1 500 € pour un patrimoine dépassant 82 000 €."
+  },
+  {
+    "id": "P12",
+    "type": "page scannée",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement formulés."
+  },
+  {
+    "id": "P13",
+    "type": "page scannée",
+    "verdict": "juste",
+    "justification": "Tous les éléments clés de la réponse attendue sont présents et correctement appliqués."
+  },
+  {
+    "id": "P14",
+    "type": "terme exact",
+    "verdict": "fausse",
+    "justification": "La réponse générée ajoute des éléments non présents dans la réponse attendue (comme les vêtements de fourrure ou de peau) et omet des critères clés (comme les œuvres d'art jusqu'à la moitié du XIXe siècle ou les collections à partir de 4 000 €)."
+  },
+  {
+    "id": "P15",
+    "type": "terme exact",
+    "verdict": "fausse",
+    "justification": "La réponse générée liste des exclusions non pertinentes (biens immobiliers, véhicules, bijoux en cas d'inhabitation) et omet les exclusions clés de la réponse attendue."
+  },
+  {
+    "id": "P16",
+    "type": "obsolescence",
+    "verdict": "fausse",
+    "justification": "Le plafond de 2 000 € indiqué dans la réponse générée contredit le montant de 3 000 € attendu dans la réponse de référence."
+  },
+  {
+    "id": "P17",
+    "type": "obsolescence",
+    "verdict": "partielle",
+    "justification": "La réponse générée mentionne correctement les délais de déclaration du sinistre (2 jours ouvrés) et de dépôt de plainte (24h), mais elle ajoute des éléments non présents dans la réponse attendue (état estimatif sous 5 jours, récupération des objets volés) et ne précise pas que le document date de 2009."
+  },
+  {
+    "id": "P18",
+    "type": "obsolescence (hors thème)",
+    "verdict": "fausse",
+    "justification": "La réponse générée affirme à tort que la résiliation n'est pas possible 'quand vous voulez', alors que la réponse attendue indique que la loi Hamon de 2014 permet désormais cette possibilité après un an d'engagement."
+  },
+  {
+    "id": "P19",
+    "type": "hors corpus",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement que l'information n'est pas disponible dans le corpus, comme la réponse attendue."
+  },
+  {
+    "id": "P20",
+    "type": "hors corpus",
+    "verdict": "refus_correct",
+    "justification": "Le modèle indique correctement ne pas trouver l'information, et la réponse attendue confirme que l'information n'est pas dans le corpus."
+  }
+]

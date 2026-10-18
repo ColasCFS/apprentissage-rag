@@ -1,0 +1,308 @@
+[
+  {
+    "id": "P01",
+    "type": "simple",
+    "question": "On m'a cambriolé. Qu'est-ce que je dois faire pour être remboursé par la MAIF ?",
+    "reponse_attendue": "Déclarer le vol aux autorités de police ou de gendarmerie, puis transmettre à la MAIF le récépissé de cette déclaration.",
+    "sources_attendues": [
+      {
+        "assureur": "MAIF",
+        "page_pdf": 21
+      }
+    ],
+    "a_verifier": ""
+  },
+  {
+    "id": "P02",
+    "type": "simple",
+    "question": "On m'a volé des affaires alors que j'avais laissé la fenêtre ouverte. MMA rembourse ?",
+    "reponse_attendue": "En principe oui : entrer par une fenêtre relève de l'escalade (introduction par une ouverture non destinée à servir d'entrée), mode de commission couvert. Réserve : en cas d'absence de plus de 24 h, l'assuré doit fermer fenêtres et portes-fenêtres ; ne pas l'avoir fait peut affecter la garantie.",
+    "sources_attendues": [
+      {
+        "assureur": "MMA",
+        "page_pdf": 16
+      },
+      {
+        "assureur": "MMA",
+        "page_pdf": 18
+      }
+    ],
+    "a_verifier": "Sanction prévue p. 18 si les fenêtres sont restées ouvertes pendant une absence (refus ou réduction)."
+  },
+  {
+    "id": "P03",
+    "type": "simple",
+    "question": "Je n'avais pas fermé à clé en sortant et on m'a volé ma télé. La MAIF me couvre ?",
+    "reponse_attendue": "Non : la garantie vol MAIF suppose un vol avec effraction, ruse ou agression ; une porte non fermée à clé ne permet pas de caractériser l'effraction.",
+    "sources_attendues": [
+      {
+        "assureur": "MAIF",
+        "page_pdf": 29
+      },
+      {
+        "assureur": "MAIF",
+        "page_pdf": 51
+      }
+    ],
+    "a_verifier": ""
+  },
+  {
+    "id": "P04",
+    "type": "simple",
+    "question": "Mon logement est resté vide deux mois cet été et j'ai été cambriolé. Ça change quelque chose chez MMA ?",
+    "reponse_attendue": "Oui : en cas d'absence de plus de 24 h, l'assuré doit fermer fenêtres et portes-fenêtres et fermer à clé les portes extérieures des bâtiments assurés. Le vol est couvert si ces obligations ont été respectées.",
+    "sources_attendues": [
+      {
+        "assureur": "MMA",
+        "page_pdf": 16
+      },
+      {
+        "assureur": "MMA",
+        "page_pdf": 18
+      }
+    ],
+    "a_verifier": "Sanction en cas de manquement ; existence éventuelle d'une règle propre aux longues inoccupations."
+  },
+  {
+    "id": "P05",
+    "type": "simple",
+    "question": "Des voleurs ont essayé d'entrer sans y arriver, mais ils ont abîmé ma porte. La MAIF paie la réparation ?",
+    "reponse_attendue": "Oui, la tentative de vol est couverte. Si vous êtes occupant, les détériorations sont prises en charge dans la limite de 1 600 € HT, remplacement à l'identique des clés et serrures privatives compris ; si vous êtes propriétaire, les détériorations sont couvertes sans ce plafond de 1 600 €. Exclus : clés, serrures et systèmes de fermeture des parties collectives d'immeubles.",
+    "sources_attendues": [
+      {
+        "assureur": "MAIF",
+        "page_pdf": 20
+      },
+      {
+        "assureur": "MAIF",
+        "page_pdf": 51
+      }
+    ],
+    "a_verifier": "Les pages 20 et 51 disent-elles la même chose (formules différentes) ?"
+  },
+  {
+    "id": "P06",
+    "type": "simple",
+    "question": "Quelqu'un que j'avais invité chez moi m'a volé des bijoux. MMA me rembourse ?",
+    "reponse_attendue": "Très probablement non : la garantie vol MMA ne joue que pour certains modes de commission (effraction, escalade, etc.), et un invité entre légitimement ; par ailleurs, les vols commis par des occupants temporaires sont exclus (couverts seulement par l'option location et échange de logement).",
+    "sources_attendues": [
+      {
+        "assureur": "MMA",
+        "page_pdf": 16
+      },
+      {
+        "assureur": "MMA",
+        "page_pdf": 17
+      }
+    ],
+    "a_verifier": "Liste complète des modes de commission p. 16 (ruse ? introduction clandestine ?) ; un invité est-il un occupant temporaire au sens du contrat ?"
+  },
+  {
+    "id": "P07",
+    "type": "comparative",
+    "question": "On m'a volé mon vélo dans la cave de l'immeuble. Je serais mieux couvert à la MAIF ou chez MMA ?",
+    "reponse_attendue": "Cela dépend du capital assuré. MAIF : vol en cave ou dépendance plafonné à 2 000 €. MMA : vol en cave couvert à hauteur de 4 % du capital « biens mobiliers d'habitation » fixé aux conditions particulières, donc MMA couvre mieux au-delà de 50 000 € de capital (2 000 / 0,04). Réserve MMA : sont exclus les biens déposés dans des locaux à usage commun et les objets à risque de vol situés dans des dépendances sans communication directe avec l'habitation.",
+    "sources_attendues": [
+      {
+        "assureur": "MMA",
+        "page_pdf": 70
+      },
+      {
+        "assureur": "MMA",
+        "page_pdf": 17
+      },
+      {
+        "assureur": "MAIF",
+        "page_pdf": 20
+      }
+    ],
+    "a_verifier": "Une cave privative est-elle un local à usage commun ? Un vélo est-il un objet à risque de vol au sens du lexique MMA ?"
+  },
+  {
+    "id": "P08",
+    "type": "comparative",
+    "question": "Pour un vol de bijoux, laquelle de la MAIF ou de MMA rembourse le moins ?",
+    "reponse_attendue": "Impossible de conclure avec les seules conditions générales : chez MMA, la garantie vol est limitée au capital choisi, indiqué aux conditions particulières. MAIF : objets précieux couverts jusqu'à 4 000 € selon la page 20.",
+    "sources_attendues": [
+      {
+        "assureur": "MAIF",
+        "page_pdf": 20
+      },
+      {
+        "assureur": "MMA",
+        "page_pdf": 7
+      }
+    ],
+    "a_verifier": "Contradiction apparente MAIF : plafond de 4 000 € p. 20 contre patrimoine d'objets précieux de plus de 82 000 € p. 21. Les pages relèvent-elles de formules différentes ?"
+  },
+  {
+    "id": "P09",
+    "type": "comparative",
+    "question": "Les voleurs sont entrés avec un double de mes clés, sans rien casser. La MAIF et MMA me remboursent-elles ?",
+    "reponse_attendue": "MMA : oui, l'usage de fausses clés ou de clés indûment obtenues est assimilé à l'effraction. MAIF : incertain ; la garantie couvre le vol avec effraction ou ruse, mais la définition de l'effraction (forcement, dégradation ou destruction d'un dispositif de fermeture) ne mentionne pas les fausses clés. Il faut interroger la MAIF.",
+    "sources_attendues": [
+      {
+        "assureur": "MMA",
+        "page_pdf": 16
+      },
+      {
+        "assureur": "MAIF",
+        "page_pdf": 17
+      },
+      {
+        "assureur": "MAIF",
+        "page_pdf": 103
+      }
+    ],
+    "a_verifier": "Définition de la ruse dans le lexique MAIF : couvre-t-elle l'usage d'un double de clés ?"
+  },
+  {
+    "id": "P10",
+    "type": "comparative",
+    "question": "Quelles protections (serrure, alarme) la MAIF, MMA et AXA exigent-elles pour couvrir le vol ?",
+    "reponse_attendue": "AXA (conditions générales d'avril 2009) : toutes les portes d'accès de l'habitation et des dépendances doivent comporter au moins une serrure, les verrous sans clé et cadenas ne comptant pas ; des mesures supplémentaires peuvent figurer aux conditions particulières. MAIF : les moyens de protection exigés sont décrits aux conditions particulières ; les conditions générales imposent un vol avec effraction, ruse ou agression. MMA : en cas d'absence de plus de 24 h, fermer fenêtres et portes-fenêtres et fermer à clé les portes extérieures ; garantie limitée au vol par effraction, escalade ou autres modes listés.",
+    "sources_attendues": [
+      {
+        "assureur": "AXA",
+        "page_pdf": 7
+      },
+      {
+        "assureur": "MAIF",
+        "page_pdf": 21
+      },
+      {
+        "assureur": "MAIF",
+        "page_pdf": 103
+      },
+      {
+        "assureur": "MMA",
+        "page_pdf": 16
+      },
+      {
+        "assureur": "MMA",
+        "page_pdf": 18
+      }
+    ],
+    "a_verifier": ""
+  },
+  {
+    "id": "P11",
+    "type": "page scannée",
+    "question": "J'ai environ 90 000 € de bijoux. Quelle franchise la MAIF applique en cas de vol ?",
+    "reponse_attendue": "1 500 €, car le patrimoine d'objets précieux dépasse 82 000 €. Exception : si les moyens de protection prévus aux conditions particulières étaient en place et activés pendant l'absence, c'est la franchise choisie au contrat qui s'applique.",
+    "sources_attendues": [
+      {
+        "assureur": "MAIF",
+        "page_pdf": 21
+      }
+    ],
+    "a_verifier": "Règles de franchise vol voisines p. 33 et p. 52 : même formule ou formule différente ?"
+  },
+  {
+    "id": "P12",
+    "type": "page scannée",
+    "question": "La MAIF m'a remboursé un cambriolage l'an dernier. Si ça recommence au même endroit, je paie plus ?",
+    "reponse_attendue": "Oui, si le premier vol a été indemnisé dans les 12 mois précédents : la franchise est triplée pour un sinistre de même nature au même lieu. Exception : souscription d'un contrat de surveillance auprès d'un professionnel.",
+    "sources_attendues": [
+      {
+        "assureur": "MAIF",
+        "page_pdf": 21
+      }
+    ],
+    "a_verifier": "Règles voisines p. 33 et p. 52 : même formule ou formule différente ?"
+  },
+  {
+    "id": "P13",
+    "type": "page scannée",
+    "question": "La MAIF m'a remboursé un vol il y a six mois. On vient de me voler des affaires dans ma cave, dont j'avais fait renforcer la porte pour 400 €. Ma franchise est-elle triplée ?",
+    "reponse_attendue": "Non : le triplement ne s'applique pas à un vol dans une cave ou une dépendance quand on justifie de travaux de renforcement de sécurité d'au moins 300 €.",
+    "sources_attendues": [
+      {
+        "assureur": "MAIF",
+        "page_pdf": 21
+      }
+    ],
+    "a_verifier": "Règles voisines p. 33 et p. 52 : même formule ou formule différente ?"
+  },
+  {
+    "id": "P14",
+    "type": "terme exact",
+    "question": "Dans le contrat MAIF M5202AHA, qu'est-ce qu'on appelle des « objets précieux » ?",
+    "reponse_attendue": "Par nature : bijoux et objets en métal précieux (or, platine, argent massif, vermeil), pierres précieuses, fines ou dures et perles montées sur or ou platine. À partir de 2 000 € de valeur unitaire : bijoux et montres de marque renommée, œuvres d'artistes de renommée au moins nationale, objets d'art jusqu'à la moitié du XIXe siècle ou de créateur reconnu, tapis et tapisseries faits main. À partir de 4 000 € : collections, meubles jusqu'à la moitié du XIXe siècle ou de créateur reconnu. À partir de 6 000 € : instruments de musique.",
+    "sources_attendues": [
+      {
+        "assureur": "MAIF",
+        "page_pdf": 104
+      }
+    ],
+    "a_verifier": "Fin de la définition, tronquée dans la saisie (suite après les instruments de musique)."
+  },
+  {
+    "id": "P15",
+    "type": "terme exact",
+    "question": "Qu'est-ce qui est exclu de la garantie vol dans les CG MMA n° 410 S ?",
+    "reponse_attendue": "Les vols commis par le conjoint, les ascendants, les descendants ou d'autres personnes vivant avec l'assuré ; les vols entre colocataires ; les biens déposés dans des casiers à skis ou des locaux à usage commun ; les objets à risque de vol situés dans des dépendances sans communication directe avec l'habitation ; les objets à risque de vol appartenant aux invités ; les vols, tentatives et vandalisme commis par des locataires ou occupants temporaires (garantis seulement par l'option location et échange de logement).",
+    "sources_attendues": [
+      {
+        "assureur": "MMA",
+        "page_pdf": 17
+      }
+    ],
+    "a_verifier": ""
+  },
+  {
+    "id": "P16",
+    "type": "obsolescence",
+    "question": "Chez AXA, mes bijoux volés sont-ils remboursés, et jusqu'à combien ?",
+    "reponse_attendue": "Selon les conditions générales AXA d'avril 2009 : jusqu'à 3 000 € ; au-delà, une porte blindée est exigée. Le système doit signaler que le document date de 2009 et que les montants actuels peuvent être différents.",
+    "sources_attendues": [
+      {
+        "assureur": "AXA",
+        "page_pdf": 34
+      }
+    ],
+    "a_verifier": "page_pdf corrigée le 18 oct. 2026 : la page imprimée avait été saisie au lieu de la position dans le PDF (décalage de 2 pages chez AXA)."
+  },
+  {
+    "id": "P17",
+    "type": "obsolescence",
+    "question": "Chez AXA, que dois-je faire et dans quel délai après un cambriolage ?",
+    "reponse_attendue": "Selon les conditions générales AXA d'avril 2009 : porter plainte dans les 24 h et déclarer le vol à AXA dans les 2 jours ouvrés suivant sa découverte. Le système doit signaler que le document date de 2009.",
+    "sources_attendues": [
+      {
+        "assureur": "AXA",
+        "page_pdf": 44
+      }
+    ],
+    "a_verifier": "page_pdf corrigée le 18 oct. 2026 : la page imprimée avait été saisie au lieu de la position dans le PDF (décalage de 2 pages chez AXA)."
+  },
+  {
+    "id": "P18",
+    "type": "obsolescence (hors thème)",
+    "question": "Je suis chez AXA. Est-ce que je peux résilier mon assurance habitation quand je veux ?",
+    "reponse_attendue": "Le document AXA prévoit une résiliation à l'échéance annuelle, mais il date d'avril 2009, avant la loi Hamon de 2014, qui permet de résilier une assurance habitation à tout moment après un an d'engagement. Le système doit signaler que la règle du document est probablement dépassée et inviter à vérifier les conditions actuelles.",
+    "sources_attendues": [
+      {
+        "assureur": "AXA",
+        "page_pdf": 41
+      }
+    ],
+    "a_verifier": "page_pdf corrigée le 18 oct. 2026 : la page imprimée avait été saisie au lieu de la position dans le PDF (décalage de 2 pages chez AXA)."
+  },
+  {
+    "id": "P19",
+    "type": "hors corpus",
+    "question": "Combien me coûterait une meilleure garantie vol à la MAIF ?",
+    "reponse_attendue": "refus",
+    "sources_attendues": [],
+    "a_verifier": ""
+  },
+  {
+    "id": "P20",
+    "type": "hors corpus",
+    "question": "Mon assurance auto MMA couvre-t-elle le vol de ma voiture ?",
+    "reponse_attendue": "refus",
+    "sources_attendues": [],
+    "a_verifier": ""
+  }
+]

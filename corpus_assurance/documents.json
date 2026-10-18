@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "fichier": "natifs/MAIF_conditions-generales-assurance-habitation.pdf",
+      "assureur": "MAIF",
+      "reference": "M5202AHA",
+      "date_version": "2026-05"
+    },
+    {
+      "fichier": "natifs/MMA_cg-habitation-410.pdf",
+      "assureur": "MMA",
+      "reference": "410 S",
+      "date_version": "2024-07"
+    },
+    {
+      "fichier": "natifs/AXA__CG_Assurance_Habitation.pdf",
+      "assureur": "AXA",
+      "reference": "inconnue",
+      "date_version": "2009-04"
+    }
+  ],
+  "scans": [
+    {"fichier": "scans/scan_axa_p7.pdf",   "assureur": "AXA",  "page_imprimee": 7,  "page_pdf": 9},
+    {"fichier": "scans/scan_maif_p21.pdf", "assureur": "MAIF", "page_imprimee": 21, "page_pdf": 21},
+    {"fichier": "scans/scan_maif_p51.pdf", "assureur": "MAIF", "page_imprimee": 51, "page_pdf": 51},
+    {"fichier": "scans/scan_maif_p52.pdf", "assureur": "MAIF", "page_imprimee": 52, "page_pdf": 52},
+    {"fichier": "scans/scan_maif_p53.pdf", "assureur": "MAIF", "page_imprimee": 53, "page_pdf": 53},
+    {"fichier": "scans/scan_mma_p16.pdf",  "assureur": "MMA",  "page_imprimee": 16, "page_pdf": 16},
+    {"fichier": "scans/scan_mma_p17.pdf",  "assureur": "MMA",  "page_imprimee": 17, "page_pdf": 17},
+    {"fichier": "scans/scan_mma_p18.pdf",  "assureur": "MMA",  "page_imprimee": 18, "page_pdf": 18},
+    {"fichier": "scans/scan_mma_p19.pdf",  "assureur": "MMA",  "page_imprimee": 19, "page_pdf": 19}
+  ]
+}
