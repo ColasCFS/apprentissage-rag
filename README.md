@@ -320,7 +320,11 @@ Les CG ne sont pas republiables : les PDF, les scans, le cache OCR et `chunks_as
 |---|---|
 | Hit rate à k = 8 | 15/18 |
 | Rang moyen (pénalité 9) | 3,17 |
-| Couverture des pages attendues | 70 % |
+| MRR | 0,61 |
+| Recall@8 (part des pages attendues retrouvées) | 71 % — 18 % sur les 4 comparatives |
+| Precision@8 (part des 8 extraits venant d'une page attendue) | 19 % |
+
+Les trois échecs de recherche (P08, P09, P16) sont deux comparatives et une question sur le document périmé. La precision basse est attendue avec k = 8 et une seule page pertinente par question simple : elle mesure le bruit envoyé au modèle, pas un échec.
 
 **Réponses**, deux mesures :
 
@@ -334,7 +338,7 @@ Les CG ne sont pas republiables : les PDF, les scans, le cache OCR et `chunks_as
 - P02 : erreur du juge, qui n'a pas vu que la réponse contredisait l'attendu (« MMA ne remboursera pas » au lieu de « en principe oui »).
 - P18 : réponse attendue mal construite (elle exigeait la loi Hamon, absente du corpus ; on ne pouvait exiger que le signalement d'un document périmé).
 
-Choix retenu : ne pas modifier la grille du juge, pour ne pas la régler sur les 10 réponses qui servent à la tester. Les deux chiffres sont publiés avec cette limite.
+Sur ce domaine, 7/10 ne suffit pas pour remplacer la notation humaine. Choix retenu : ne pas modifier la grille du juge, pour ne pas la régler sur les 10 réponses qui servent à la tester (ce serait gonfler l'accord sans rendre le juge meilleur) ; le réétalonner demandera un nouvel échantillon noté à la main. Les deux chiffres sont publiés avec cette limite.
 
 **Par type de question (verdicts du juge) :**
 
@@ -342,10 +346,10 @@ Choix retenu : ne pas modifier la grille du juge, pour ne pas la régler sur les
 |---|---|---|
 | Pages scannées | 3/3 | L'OCR tient sur ces pages, réponses au rang 1 |
 | Hors corpus | 2/2 | Refus corrects, avec renvoi aux conditions particulières |
-| Simples | 3/6 | Erreurs de génération (P01 oublie la plainte) et de recherche (P02 : la page définissant l'escalade n'est pas récupérée) |
+| Simples | 3/6 (dont P02, compté juste à tort par le juge : 2/6 en réalité) | Erreurs de génération (P01 oublie la plainte) et de recherche (P02 : la page définissant l'escalade n'est pas récupérée) |
 | Comparatives | 0/4 | Point faible principal : les 8 extraits viennent presque tous d'un seul assureur ; MMA absent des extraits pour P07 et P09 |
 | Terme exact | 0/2 | Réponses incomplètes ou hors sujet malgré une page trouvée (rangs 4 et 1) — verdicts du juge non revus à la main |
-| Document périmé | 0/3 | Le modèle signale bien l'édition 2009, mais répond ensuite comme si la règle était actuelle (P18) ; un montant faux (P16) |
+| Document périmé | 0/3 | Le modèle signale bien l'édition 2009, mais répond ensuite comme si la règle était actuelle (P18) ; un montant faux (P16, dont la page attendue n'est pas récupérée) |
 
 **Coût** : ~1 440 tokens d'entrée et ~280 de sortie par question (28 836 / 5 666 sur les 20).
 

@@ -164,7 +164,7 @@
     "sources_attendues": [
       {
         "assureur": "AXA",
-        "page_pdf": 7
+        "page_pdf": 9
       },
       {
         "assureur": "MAIF",
@@ -183,7 +183,7 @@
         "page_pdf": 18
       }
     ],
-    "a_verifier": ""
+    "a_verifier": "page_pdf AXA corrigée le 18 oct. 2026 : 7 (page imprimée) → 9 (position dans le PDF)."
   },
   {
     "id": "P11",

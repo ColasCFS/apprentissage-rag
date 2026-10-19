@@ -20,6 +20,8 @@ with open("reponses_assurance.json", encoding="utf-8") as f:
 # rang      : rang de la première page attendue trouvée (K + 1 si aucune, la pénalité du module 7)
 # couverture: part des pages attendues retrouvées — utile pour les questions à plusieurs sources
 # assureurs : pour les comparatives, les assureurs attendus absents des extraits
+# precision : part des K extraits qui viennent d'une page attendue (on compte les extraits, pas les pages)
+# rr        : 1 / rang du premier extrait pertinent, 0 si aucun (sa moyenne est le MRR)
 lignes = []
 for q in questions:
     attendues = {(s["assureur"], s["page_pdf"]) for s in q["sources_attendues"]}
@@ -34,6 +36,8 @@ for q in questions:
         "hit": bool(rangs),
         "rang": min(rangs) if rangs else K + 1,
         "couverture": len(trouvees) / len(attendues),
+        "precision": len(rangs) / K,
+        "rr": 1 / min(rangs) if rangs else 0,
         "assureurs_absents": sorted(assureurs_absents),
     })
 
@@ -41,9 +45,11 @@ for q in questions:
 for l in lignes:
     absents = f" | assureurs absents : {', '.join(l['assureurs_absents'])}" if l["assureurs_absents"] else ""
     print(f"{l['id']} {l['type']:<28} hit={'oui' if l['hit'] else 'NON'}  rang={l['rang']}  "
-          f"couverture={l['couverture']:.0%}{absents}")
+          f"recall={l['couverture']:.0%}  precision={l['precision']:.0%}{absents}")
 
 n = len(lignes)
 print(f"\nHit rate à k={K} : {sum(l['hit'] for l in lignes)}/{n}")
 print(f"Rang moyen (pénalité {K + 1}) : {sum(l['rang'] for l in lignes) / n:.2f}")
-print(f"Couverture moyenne des pages attendues : {sum(l['couverture'] for l in lignes) / n:.0%}")
+print(f"Recall@{K} (couverture des pages attendues) : {sum(l['couverture'] for l in lignes) / n:.0%}")
+print(f"Precision@{K} : {sum(l['precision'] for l in lignes) / n:.0%}")
+print(f"MRR : {sum(l['rr'] for l in lignes) / n:.2f}")
