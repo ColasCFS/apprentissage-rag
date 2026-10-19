@@ -58,8 +58,9 @@ def appeler_modele(user_msg):
 # --- Bloc 4 : répondre à une question (recherche puis génération) ---
 # Renvoie aussi les extraits récupérés, avec leur rang : ils serviront au hit rate
 # et au rang moyen sans refaire la recherche.
-def repondre(question):
-    resultats = rechercher(question, k=K)
+# assureurs : transmis tel quel à rechercher() (None = tout le corpus, comme pour l'évaluation).
+def repondre(question, assureurs=None):
+    resultats = rechercher(question, k=K, assureurs=assureurs)
     contexte = "\n\n".join(formater(c) for c, score in resultats)
     user_msg = f"Extraits :\n{contexte}\n\nQuestion : {question}"
 

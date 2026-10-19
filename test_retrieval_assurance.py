@@ -26,11 +26,34 @@ QUESTIONS = {
 # --- Recherche : similarité cosinus entre la question et tous les chunks ---
 # Même calcul qu'au module 5 ; la question n'a pas de préfixe assureur, c'est voulu :
 # un client ne formule pas sa question comme un chunk
-def rechercher(question, k=K):
+#
+# assureurs (ajouté le 19 oct. pour l'interface) :
+#   - None ou liste vide : comportement d'origine, les k meilleurs de tout le corpus
+#     (les scripts d'évaluation n'ont pas changé : non-régression) ;
+#   - une liste : les k places sont réparties entre les assureurs cités (8 → 4 + 4, 3 + 3 + 2),
+#     chacun garde ses meilleurs extraits. C'est le remède structurel aux comparatives :
+#     un assureur ne peut plus prendre toutes les places.
+# Un seul appel d'embedding dans tous les cas : seul le classement change.
+def rechercher(question, k=K, assureurs=None):
     q = np.array(client.embeddings.create(model="mistral-embed", inputs=[question]).data[0].embedding)
     scores = vecteurs @ q / (np.linalg.norm(vecteurs, axis=1) * np.linalg.norm(q))
-    meilleurs = np.argsort(-scores)[:k]
-    return [(chunks[i], scores[i]) for i in meilleurs]
+    ordre = np.argsort(-scores)   # tous les chunks, du plus proche au plus lointain
+
+    if not assureurs:
+        return [(chunks[i], scores[i]) for i in ordre[:k]]
+
+    # Répartition des k places : k // n chacun, le reste aux premiers de la liste
+    n = len(assureurs)
+    places = [k // n + (1 if j < k % n else 0) for j in range(n)]
+
+    resultats = []
+    for assureur, nb in zip(assureurs, places):
+        siens = [i for i in ordre if chunks[i]["assureur"] == assureur][:nb]
+        resultats += [(chunks[i], scores[i]) for i in siens]
+
+    # On remet l'ensemble dans l'ordre des scores : le rang affiché reste lisible
+    resultats.sort(key=lambda r: -r[1])
+    return resultats
 
 
 # --- Affichage : pour chaque extrait, d'où il vient et son début ---
