@@ -39,7 +39,7 @@ def chunk_text(text, size, overlap):
 
 if __name__ == "__main__":
     try:
-        documents = charger_documents("docs")
+        documents = charger_documents("exercices/docs")
     except FileNotFoundError as e:
         print(e)
         raise SystemExit(1)
@@ -49,5 +49,4 @@ if __name__ == "__main__":
 
     chunks = chunk_text(documents[0]["texte"], size, overlap)
     print(len(chunks))
-
 

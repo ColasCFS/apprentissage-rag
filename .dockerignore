@@ -1,0 +1,11 @@
+# Fichiers jamais envoyés à Docker pendant le build (filet de sécurité en plus de la liste blanche du Dockerfile).
+.env
+.venv/
+.git/
+__pycache__/
+corpus_assurance/
+corpus_location/
+ocr_cache/
+*.npy
+chunks*.json
+*.pdf

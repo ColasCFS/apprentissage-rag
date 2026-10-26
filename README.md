@@ -1,3 +1,43 @@
+# Apprentissage RAG : du premier script Python à un RAG évalué et conteneurisé
+
+Parcours de septembre-octobre 2026, commencé au niveau débutant en Python. L'objectif n'était pas de devenir développeur, mais de comprendre de l'intérieur ce qu'on déploie chez un client : comment un RAG trouve l'information, comment il se trompe, comment on le mesure et ce qu'il coûte.
+
+Jusqu'au 15 octobre, j'ai écrit le code moi-même. Ensuite, j'ai défini l'architecture, les essais et les décisions, et le code a été rédigé avec un assistant IA, puis relu et lancé par moi.
+
+## Ce que montre ce dépôt
+
+| Partie | Question posée | Résultat principal |
+|---|---|---|
+| [1. RAG location](#ce-que-fait-le-projet) | Construire un RAG complet : découpage, embeddings, recherche, réponse sourcée, refus hors corpus | 30 fiches service-public.fr, stack 100 % Mistral |
+| [2. Évaluation](#évaluation-et-essais-module-7) | Mesurer avant de régler : 15 questions figées, une variable changée à la fois | 12/15 → 13/15 réponses correctes ; LLM-juge d'accord avec la notation humaine sur 14/15 puis 15/15 |
+| [3. Workflow ou agent ?](#workflow-reformulation-ou-agent--15-octobre) | Un agent qui choisit ses recherches fait-il mieux qu'un workflow fixe ? | Même qualité (15/15), mais 2,3 fois plus de tokens : workflow retenu |
+| [4. Projet final : assurance](#projet-final--rag-sur-des-conditions-générales-dassurance-16-18-octobre) | CG habitation de 3 assureurs, pages scannées (OCR), document volontairement périmé | Recherche 15/18 ; réponses correctes 4/10 à la notation humaine ; goulot identifié : les questions comparatives entre assureurs |
+| [5. Déploiement](#interface-et-déploiement) | Interface pour un utilisateur qui ne code pas, livrée en conteneur | App Streamlit sous Docker, avec la clé API et l'index hors de l'image |
+
+Trois leçons qui reviennent dans tout le dépôt :
+- **Une consigne oriente, la structure contraint.** Quand le modèle ignore une règle du prompt, la solution est dans le code (une recherche par assureur, une limite de tours), pas dans une consigne plus insistante.
+- **Mesurer avant de complexifier.** L'agent et la reformulation semblaient des améliorations. Mesurés, ils n'apportaient rien ou dégradaient.
+- **Les limites sont écrites à côté des chiffres :** une seule exécution, un jeu de développement, une vérité terrain non validée par un expert.
+
+## Interface et déploiement
+
+L'interface (`app.py`) interroge le RAG assurance. On coche les assureurs, on pose une question, et on obtient la réponse avec les extraits cités (assureur, page, natif ou scan).
+
+```powershell
+docker build -t rag-assurance .
+docker run --rm -p 8501:8501 --env-file .env `
+  -v "${PWD}/chunks_assurance.json:/app/chunks_assurance.json:ro" `
+  -v "${PWD}/vectors_assurance.npy:/app/vectors_assurance.npy:ro" `
+  rag-assurance
+# puis http://localhost:8501
+```
+
+L'image ne contient que le code et les bibliothèques. La clé API est passée au lancement, et l'index (qui contient le texte des CG, non republiables) est monté depuis la machine, en lecture seule. Les CG, les scans et l'index ne sont pas dans ce dépôt : l'app ne se relance donc pas telle quelle depuis GitHub.
+
+---
+
+# Détail du parcours
+
 ## Parcours d'apprentissage
 
 Ce RAG est l'aboutissement d'un parcours en modules. Etapes précédentes : appels d'API avec `requests` et gestion des erreurs, manipulation de JSON, lecture et découpage de fichiers, appels à un LLM (résumé de document en JSON, conversation multi-tours, calcul du coût en tokens), embeddings et recherche sémantique.
@@ -16,6 +56,7 @@ Ce projet d'apprentissage vise à comprendre et à expérimenter les mécanismes
 Le système fonctionne en deux phases : l'**indexation**, lancée une fois (ou quand le corpus change), et la **requête**, à chaque question.
 
 
+```mermaid
 flowchart LR
   subgraph Indexation [ingest.py — une fois]
     A[corpus_location/*.txt] --> B[Découpage 500 / 50]
@@ -30,6 +71,7 @@ flowchart LR
     G --> H[mistral-small-latest]
     H --> R[Réponse + sources]
   end
+```
 
 
 | Fichier | Rôle | Entrée | Sortie |
@@ -42,7 +84,12 @@ flowchart LR
 
 ### Lancer le projet
 
-
+```powershell
+pip install -r requirements.txt
+# fichier .env à la racine : MISTRAL_API_KEY=ta_clé
+python ingest.py                      # construit chunks.json et vectors.npy (une fois)
+python ask.py "Quel est le préavis pour un logement meublé ?"
+```
 
 ### Détail par fichier
 
